@@ -69,19 +69,19 @@
     </div><!-- /.navbar-wrapper -->
 
  
-    <div class="container">
+  <div class="container">
 
 		<?php if(isset($content)) echo $content; ?>
 
 		<?php if(isset($client_files_body)) echo $client_files_body; ?>
 		
 
+  </div>
 
+    <footer class="container">
+          <p>CSCIE-15 Project4 - Shawna Spoor</p>
+    </footer>
 
-  <footer >
-        <p>CSCIE-15 Project4 - Shawna Spoor</p>
-  </footer>
-</div>
 
     <!-- javascript - Placed at the end of the document so the pages load faster -->
 
