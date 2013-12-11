@@ -69,67 +69,19 @@
     </div><!-- /.navbar-wrapper -->
 
  
-    <!--Carousel-->
-     <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="cookiespleaselogo.jpg" alt="Cookies Please">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Cookies Please</h1>
-              <p class="lead">Your online source for my most delicious medical marijuana baked goods in southern California.</p>
-              <a class="btn btn-large btn-primary" href="#">Order today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="chewy-brownies.jpg" alt="Brownies">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="chocolatechip.jpg" alt="Chocolate Chip">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
-
-
-
-
-
     <div class="container">
 
 		<?php if(isset($content)) echo $content; ?>
 
 		<?php if(isset($client_files_body)) echo $client_files_body; ?>
 		
-	 </div>
-
-      <div id="push"></div>
-  </div>
-
-  <div id="footer">
-    <div class="container">
-        <p class="muted credit">CSCIE-15 Project4 - Shawna Spoor</p>
-   </div>
- </div>
 
 
 
+  <footer >
+        <p>CSCIE-15 Project4 - Shawna Spoor</p>
+  </footer>
+</div>
 
     <!-- javascript - Placed at the end of the document so the pages load faster -->
 
