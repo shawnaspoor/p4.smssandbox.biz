@@ -2915,7 +2915,7 @@ table th[class*="span"],
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  background-color: #5ccccc;
+  background-color: #a79bcd;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
@@ -3961,7 +3961,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
 }
 
 .nav > li > a > img {
@@ -3978,7 +3978,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 11px;
   font-weight: bold;
   line-height: 20px;
-  color: #999999;
+  color: #a79bcd;
   text-transform: uppercase;
 }
 
@@ -4007,7 +4007,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover,
 .nav-list > .active > a:focus {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #a79bcd;
 }
 
 .nav-list [class^="icon-"],
@@ -4208,7 +4208,7 @@ input[type="submit"].btn.btn-mini {
 .nav > li.dropdown.open.active > a:hover,
 .nav > li.dropdown.open.active > a:focus {
   color: #ffffff;
-  background-color: #999999;
+  background-color: #a79bcd;
   border-color: #999999;
 }
 
@@ -4374,7 +4374,7 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #6C8CD5;
+  background-color: #a79bcd;
   background-repeat: repeat-x;
   border: 1px solid #d4d4d4;
 
@@ -4720,7 +4720,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   color: #ffffff;
-  background-color: #6A4BD7;
+  background-color: #a79bcd;
 }
 
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
@@ -4765,7 +4765,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #1b1b1b;
+  background-color: #a79bcd;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
   background-image: -webkit-linear-gradient(top, #222222, #111111);

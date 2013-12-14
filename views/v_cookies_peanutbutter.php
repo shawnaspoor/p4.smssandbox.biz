@@ -9,23 +9,24 @@
 				</div>
 				<div class="span6">
 					<div class="title>">
-						<h1>Chocolate Chip Cookies</h1>
+						<h1>Peanut Butter Cookies</h1>
 					</div>
 
 
 
 					<div>
-						<p>These homemade chocolate chip cookies feature two kinds of chocolate chips, are soft and chewy, and best
-							served warm. I add a special vanilla blend to help cover the taste of the marijuana.</p>
+						<p>Sweet and Salty mixed in one wonderfull cookie!
+							This recipe has more than a jar of peanut butter per batch
+							and has am intense flavor.</p>
 					</div>
 					<div>
 						<h5>Price Per Cookie: $3.75</h5>
 					</div>
-					<form action="../cart/cart" method="post">
+					<form action="../cart/cart" method="get">
 					<div>
 						Quantity <input type="text" name="quantity"/>
 					</div>
-					<input type="hidden" name="id" value = "1">
+					<input type="hidden" name="id" value = "3">
 					<button type ="submit" name="action" value="add">
 						Add to Shopping Cart
 					</button>

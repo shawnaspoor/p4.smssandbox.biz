@@ -9,32 +9,7 @@ class cookies_controller extends base_controller {
 		}
 
 		
-		public function products($productID) {
-
-			#query the products table to pull the product info
-			$q = "SELECT 
-					products.productID,
-					products.productName,
-					products.pricePerUnit
-				FROM products
-				WHERE products.productID = ".$this->product->productID;
-
-			#pull in the information from the db based on query
-			$product = DB::instance(DB_NAME)->select_rows($q);
-
-			#give products a definition
-			$this->template->content->product = $product;
-			$this->template->content = View::instance('v_cookies_chocolatechip');
-
-
-			print_r($q);
-			#render the template
-			echo $this->template;
-		}
-
 		public function chocolatechip() {
-    		
-
 
 			#setup the view
 			$this->template->content = View::instance('v_cookies_chocolatechip');
@@ -44,5 +19,43 @@ class cookies_controller extends base_controller {
 			echo $this->template;
 
 		}
+
+		public function doublechocolatechip() {
+
+			#setup the view
+			$this->template->content = View::instance('v_cookies_doublechocolatechip');
+			echo $this->template->title ="Double Chocolate Chip Cookies";
+
+			#render the view
+			echo $this->template;
+
+		}
+
+
+		public function peanutbutter() {
+
+			#setup the view
+			$this->template->content = View::instance('v_cookies_peanutbutter');
+			echo $this->template->title ="Peanut Butter Cookies";
+
+			#render the view
+			echo $this->template;
+
+		}
+
+
+		public function snickerdoodle() {
+
+			#setup the view
+			$this->template->content = View::instance('v_cookies_snickerdoodle');
+			echo $this->template->title ="Snickerdoodle Cookies";
+
+			#render the view
+			echo $this->template;
+
+		}
+
+
+
 
 	}

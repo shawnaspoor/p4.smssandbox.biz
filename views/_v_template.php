@@ -1,4 +1,3 @@
-<?php session_start();  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,10 +19,10 @@
 
 <body>	
 
-	<!---top navbar fixed to the top of the page
+<!--top navbar fixed to the top of the page-->
 
    <div class="navbar-wrapper">
-       Wrap the .navbar in .container to center it within the absolutely positioned parent. 
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
 
         <div class="navbar navbar-inverse">
@@ -33,32 +32,32 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand active" href="#">Cookies Please</a>
+            <a class="brand active" href="/">Cookies Please</a>
             <div class="nav-collapse collapse">
               <ul class="nav">                
 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cookies<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Chocolate Chip</a></li>
-                    <li><a href="#">Double Chocolate Chip</a></li>
-                    <li><a href="#">Peanut Butter</a></li>
-                    <li><a href="#">Snickerdoodle</a></li>
+                    <li><a href="/cookies/chocolatechip">Chocolate Chip</a></li>
+                    <li><a href="/cookies/doublechocolatechip">Double Chocolate Chip</a></li>
+                    <li><a href="/cookies/peanutbutter">Peanut Butter</a></li>
+                    <li><a href="/cookies/snickerdoodle">Snickerdoodle</a></li>
                   </ul>
                 </li>
 
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brownies <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Walnut</a></li>
-                    <li><a href="#">Chocolate Mint</a></li>
-                    <li><a href="#">Marshmallow Crunch</a></li>
-                    <li><a href="#">Salted Caramel</a></li>
+                    <li><a href="/brownies/walnut">Walnut</a></li>
+                    <li><a href="/brownies/chocolatemint">Chocolate Mint</a></li>
+                    <li><a href="/brownies/marshmallowcrunch">Marshmallow Crunch</a></li>
+                    <li><a href="/brownies/saltedcaramel">Salted Caramel</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#about">Contact</a></li>
-                <li><a href="#contact">Shopping Cart</a></li>
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/about">Contact</a></li>
+                <li><a href="/contact">Shopping Cart</a></li>
              </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -69,17 +68,20 @@
 
  
   <div class="container">
+    
 
-		<?php if(isset($content)) echo $content; ?>
+        		<?php if(isset($content)) echo $content; ?>
 
-		<?php if(isset($client_files_body)) echo $client_files_body; ?>
-		
+        		<?php if(isset($client_files_body)) echo $client_files_body; ?>
+        		
 
-  </div>
+          </div>
 
-    <footer class="container">
-          <p>CSCIE-15 Project4 - Shawna Spoor</p>
-    </footer>
+            <footer class="container">
+                  <p>CSCIE-15 Project4 - Shawna Spoor</p>
+            </footer>
+          </div>
+
 
 
     <!-- javascript - Placed at the end of the document so the pages load faster -->
@@ -87,12 +89,7 @@
     <script src="/js/js-bootstrap/jquery.js"></script>
     <script src="/js/js-bootstrap/bootstrap-transition.js"></script>
     <script src="/js/js-bootstrap/bootstrap-alert.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-modal.js"></script>
     <script src="/js/js-bootstrap/bootstrap-dropdown.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-scrollspy.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-tab.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-tooltip.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-popover.js"></script>
     <script src="/js/js-bootstrap/bootstrap-button.js"></script>
     <script src="/js/js-bootstrap/bootstrap-collapse.js"></script>
     <script src="/js/js-bootstrap/bootstrap-carousel.js"></script>
