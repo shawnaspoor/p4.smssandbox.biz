@@ -14,7 +14,7 @@ If you want a different default time format for this app, set it below
 */
 
 # What is the name of this app?
-	define('APP_NAME', 'Now That You Mention It');  
+	define('APP_NAME', 'Cookies Please');  
 
 # When email is sent out from the server, where should it come from?
 # Ideally, this should match the domain name
@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'shawna@spoor.org'); 
 
 # Default DB name for this app
-	define('DB_NAME', "p2_smssandbox_biz"); 
+	define('DB_NAME', "p4_smssandbox_biz"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
