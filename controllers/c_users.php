@@ -96,6 +96,7 @@
           
 			#setup the view
 			$this->template->content = View::instance('v_users_profile');
+			$this->template->content->orderhistory = View::instance('v_orderhistory');
 			#give the page a title
 			$this->template->title = "Profile of ".$this->user->first_name;
 			
@@ -108,24 +109,56 @@
 
 		}
 
+		public function orderhistory() {
+			#setup the view
+			$this->template->content = View::instance('v_orderhistory');
+
+			#pull the order, if any exist from the db
+			$q = "SELECT 
+					orderid.order_no 
+					FROM orderid 
+					WHERE user_id = ".$this->user->user_id; 
+
+			#pull the orders from the db 		
+			$orders = DB::instance(DB_NAME)->select_rows($q);
+
+			#store the input into this var
+			$this->template->content->orders = $orders;
+		
+			#render
+			echo $this->template;
+		}
+
 
 
 
 		public function p_profile_update() {
 
+			$requiredFields = array(
+				"first_name" => $_POST['first_name'], 
+				"last_name" => $_POST['last_name'], 
+				"email" => $_POST['email'],
+				"billingAddress" => $_POST['billingAddress'], 
+				"city" => $_POST['city'], 
+				"state" => $_POST['state'], 
+				"zipcode" => $_POST['zipcode'],
+				"licenseNo" => $_POST['licenseNo']
+				);
+
+
 			#this is the error checking for the profile updates so that people don't feed in blank fields or duplicate email address			
-			foreach($_POST as $field => $value) {
+			foreach($requiredFields as $field => $value) {
             	if(empty($value)  || ctype_space($value))  {
                 	#If any fields are blank, send error message
                 	Router::redirect('/users/profile/blank-fields');  
             		}
         		}       
 
-       		 #checking to see if the email already exists in the db
-       		 $exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '" . $_POST['email'] . "'");
-			
+       		 #checking to see if the email already exists in the db and if it does exist that it matches the email that is associated with that userID
+       		$exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '" . $_POST['email'] . "'");
+			$duplicate = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE user_id = '".$this->user->user_id . "' AND email = '" . $_POST['email'] . "'");
 			#if that email address does already exist
-			if($exists) {
+			if($exists && !$duplicate) {
 				Router::redirect('/users/profile/email-exists');
 			}
 				
@@ -137,7 +170,15 @@
 				"user_id" => $this->user->user_id, 
 				"first_name" => $_POST['first_name'], 
 				"last_name" => $_POST['last_name'], 
-				"email" => $_POST['email']
+				"email" => $_POST['email'],
+				"phoneNo" => $_POST['phoneNo'], 
+				"billingAddress" => $_POST['billingAddress'], 
+				"billingAddress2" => $_POST['billingAddress2'],
+				"city" => $_POST['city'], 
+				"state" => $_POST['state'], 
+				"zipcode" => $_POST['zipcode'],
+				"licenseNo" => $_POST['licenseNo']
+
 				);
 
 			#insert into the db

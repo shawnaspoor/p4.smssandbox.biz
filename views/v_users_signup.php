@@ -1,12 +1,11 @@
 <div id="wrap">
-		<div class="row-fluid">
 		<div class="span11">
+			<div class="row-fluid">
+		
 			
 					<div class="signup" id="signup">
 						<h3>Sign Up</h3>
 						<form class="form-horizontal" method='Post' action='/users/p_signup' id="signup">
-							
-							
 								
 									<h4>First Name</h4>
 									<div class="requiredinput">*</div><br>
@@ -44,7 +43,7 @@
 
 									<h4>City</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="city" name="city" maxlength="30">
-									<div class="length" id="statelength"></div>
+									<div class="length" id="citylength"></div>
 
 									<h4>State</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="state" name="state" maxlength="30">
@@ -52,12 +51,12 @@
 									
 									<h4>Zipcode</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="zipcode" name="zipcode" maxlength="30">
-									<div class="length" id="statelength"></div>
+									<div class="length" id="zipcodelength"></div>
 
 
 									<h4>License Number</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="licenseNo" name="licenseNo" maxlength="30">
-									<div class="length" id="statelength"></div>
+									<div class="length" id="licenselength"></div>
 							
 							
 							

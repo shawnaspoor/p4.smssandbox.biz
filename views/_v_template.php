@@ -14,6 +14,11 @@
 	<link rel="stylesheet" media="screen" href="/css/css-bootstrap/bootstrap-responsive.css" />
 	<link href="/css/footer.css" rel="stylesheet">
 
+  <!--javascript that needs to be in the head -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="/js/jquery.validate.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -85,15 +90,14 @@
 
 
     <!-- javascript - Placed at the end of the document so the pages load faster -->
-
+    <script src="/js/orderform.js"></script>
     <script src="/js/js-bootstrap/jquery.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-transition.js"></script>
     <script src="/js/js-bootstrap/bootstrap-alert.js"></script>
     <script src="/js/js-bootstrap/bootstrap-dropdown.js"></script>
     <script src="/js/js-bootstrap/bootstrap-button.js"></script>
     <script src="/js/js-bootstrap/bootstrap-collapse.js"></script>
     <script src="/js/js-bootstrap/bootstrap-carousel.js"></script>
-    <script src="/js/js-bootstrap/bootstrap-typeahead.js"></script>
+
     <script>
       !function ($) {
         $(function(){

@@ -1,4 +1,9 @@
+
+
+
 $(document).ready(function(){
+
+console.log("js is working");
 
     $('#addInvoiceLine').attr('disabled',true);
     $('#button').attr('disabled', true);
@@ -227,22 +232,55 @@ $('#addInvoiceLine').click(function() {
  validate input from the fields
   --------------------------------------------------------------------------*/ 
   //this is done using the jquery validation plugin, available at http://jqueryvalidation.org/
- $('#left-side').keyup(function() {
-	$('form').validate({
+ $('#signup').keyup(function() {
+	$('#signup').validate({
 
 	   rules: {
-	     name: {
+	     first_name: {
 	       required: true,
 	       minlength: 2,
 
+	     },
+	     last_name: {
+	       required: true,
+	       minlength: 2,
+
+	     },
+	     phone: {
+	       required: false,
+	       minlength: 10,
+	       digits:true
+	     },
+	     password: {
+	       required: true,
+	       minlength: 5
 	     },
 	     billingAddress: {
 	       required: true,
 	       minlength: 10
 	     },
+	     billingAddress2: {
+	       required: true,
+	       minlength: 2
+	     },
+	     city: {
+	       required: true,
+	       minlength:2
+	     },
 	     state: {
 	       required: true,
 	       minlength:10
+	     },
+	     zipcode: {
+	       required: true,
+	       minlength:5,
+	       maxlength: 5,
+	       number:true
+	     },
+	     licenseNo: {
+	       required: true,
+	       minlength:8,
+
 	     },
 	     email: {
 	       required: true,
@@ -251,9 +289,16 @@ $('#addInvoiceLine').click(function() {
 	     }
 	   },
 	   messages: {
-	     name: "<br> Please enter your name",
+	     first_name: "<br> Please enter your first name",
+	     last_name:  "<br> Please enter your last name",
+	     phone:  "<br> Phone numbers can be numbers only",
+	     password:  "<br> Please enter a password that is at least 5 character long",
 	     billingAddress: "<br> Please enter a billing address.",
-	     state: "<br> We need your city, state, and zipcode as well.",
+	     billingAddress2:  "<br> This field needs at least 2 character. Please put a # in front of unit number if required.",
+	     city: "<br> Please enter your city",
+	     state: "<br> We need your state.",
+	     zip: "<br> Zipcodes can be numbers only",
+	     licenseNo: "<br> Legally we need to keep this on file. We appreciate your cooperation.",
 	     email: "<br> Definitely required, we need to know how to contact you to take payment."
 	   }
 	 });

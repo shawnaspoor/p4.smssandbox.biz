@@ -10,6 +10,7 @@
  */
 
 (function($) {
+	console.log("validate is being loaded");
 
 $.extend($.fn, {
 	// http://docs.jquery.com/Plugins/Validation/validate
