@@ -101,7 +101,7 @@
 			$this->template->title = "Profile of ".$this->user->first_name;
 			#pull the order, if any exist from the db
 			$q = "SELECT 
-					orderid.order_no 
+					order_no 
 					FROM orderid 
 					WHERE user_id = ".$this->user->user_id; 
 
@@ -116,9 +116,6 @@
 			#render
 			echo $this->template;
 
-
-		
-	
 		}
 
 

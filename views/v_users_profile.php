@@ -100,15 +100,16 @@
 
 
 
-					</div>	
+		</div>	
 		<div class="span4" id="orderhistory">
 			<h4>Order History</h4>
 				<div>
 					<?php foreach ($orders as $order): ?>
 
-						<article class="order">
-						    <h3><?=$order['order_no']?></h3>   
-						</article>
+						<form method="post" id="orderid" class="order">
+						    <h4><a href="/orderhistory/orderhistory"><?=$order['order_no']?></a></h4>
+
+						</form>
 
 					<?php endforeach; ?>
 		     	</div>

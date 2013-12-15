@@ -27,7 +27,7 @@
 <!--top navbar fixed to the top of the page-->
 
    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <!--   Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
 
         <div class="navbar navbar-inverse">
@@ -60,7 +60,13 @@
                     <li><a href="/brownies/saltedcaramel">Salted Caramel</a></li>
                   </ul>
                 </li>
+                <?php if($user): ?>
+                <li><a href="/users/profile">Profile</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+                <?php else: ?>
                 <li><a href="/users/login">Login</a></li>
+                 <li><a href="/users/signup">Sign Up</a></li>
+               <?php endif; ?>
                 <li><a href="/about">Contact</a></li>
                 <li><a href="/contact">Shopping Cart</a></li>
              </ul>

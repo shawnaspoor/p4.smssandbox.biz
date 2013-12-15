@@ -550,11 +550,12 @@ input css
   padding-left:15px;
   padding-top:10px;
   border: solid thin #f2f2f2;
+
 }
 
 #orderhistory {
-  padding-left: 25px;
+  padding-left: 50px;
   display: block;
-  
-  
+  float: right;
 }
+
