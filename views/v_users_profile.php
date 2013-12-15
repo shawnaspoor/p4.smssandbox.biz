@@ -102,12 +102,19 @@
 
 					</div>	
 		<div class="span4" id="orderhistory">
-			<?=$orderhistory;?>
+			<h4>Order History</h4>
+				<div>
+					<?php foreach ($orders as $order): ?>
+
+						<article class="order">
+						    <h3><?=$order['order_no']?></h3>   
+						</article>
+
+					<?php endforeach; ?>
+		     	</div>
 		</div>
-		     	
-				</div>
-			</div>
-		</div>
+	</div>
+</div>
 		
 	<?php else: ?>
 	    <h1>No user specified</h1>

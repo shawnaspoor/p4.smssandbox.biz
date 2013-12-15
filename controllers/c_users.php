@@ -96,23 +96,9 @@
           
 			#setup the view
 			$this->template->content = View::instance('v_users_profile');
-			$this->template->content->orderhistory = View::instance('v_orderhistory');
+			
 			#give the page a title
 			$this->template->title = "Profile of ".$this->user->first_name;
-			
-			#If there is an issue with the signup this will update the view
-			$this->template->content->error = $error;
-			
-			#render
-			echo $this->template;
-
-
-		}
-
-		public function orderhistory() {
-			#setup the view
-			$this->template->content = View::instance('v_orderhistory');
-
 			#pull the order, if any exist from the db
 			$q = "SELECT 
 					orderid.order_no 
@@ -124,9 +110,15 @@
 
 			#store the input into this var
 			$this->template->content->orders = $orders;
-		
+			#If there is an issue with the signup this will update the view
+			$this->template->content->error = $error;
+			
 			#render
 			echo $this->template;
+
+
+		
+	
 		}
 
 
