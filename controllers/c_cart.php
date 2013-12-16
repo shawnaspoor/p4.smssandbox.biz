@@ -37,33 +37,37 @@ class cart_controller extends base_controller {
 
 				}
 
-			
+			/**/
 			if($_SESSION['cart']) { 
 				 foreach($_SESSION['cart'] as $product => $quantity) { 
+
 
 		        //get the name, description and price from the database
 		        //use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
 		        $sql = sprintf("SELECT productName, pricePerUnit FROM products WHERE productID = %d", $productid);
-
-		        	$result = DB::instance(DB_NAME)->select_rows($sql);
-
+		        	
+		        $result = DB::instance(DB_NAME)->select_rows($sql);
+				
+				var_dump($result);
 		        //Only display the row if there is a product (though there should always be as we have already checked)
-		        if(DB::instance(DB_NAME)->select_field($result) > 0) {
+		        if(DB::instance(DB_NAME)->select_field($result) !=null) {
 
-		            list($productName, $pricePerUnit) = select_rows($result);
+		            list($productName, $pricePerUnit) = $result;
 
 		            $line_cost = $pricePerUnit * $quantity; //work out the line cost
 		            $total = $total + $line_cost; //add to the total cost
 
 		            }	
 				else
-				{
+			{	
 				//otherwise tell the user they have no items in their cart
-				    echo "You have no items in your shopping cart.";
+				    
+					echo "You have no items in your shopping cart.";
 
 				}
 			}
 		}
+	
 		#setup the view
 		$this->template->content = View::instance('v_cart');
 		echo $this->template->title ="Cart";
