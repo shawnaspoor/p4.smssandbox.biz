@@ -23,9 +23,7 @@
 						<h5>Price Per Cookie: $3.75</h5>
 					</div>
 					<form action="../cart/cart" method="get">
-					<div>
-						Quantity <input type="text" name="quantity"/>
-					</div>
+					
 					<input type="hidden" name="id" value = "3">
 					<button type ="submit" name="action" value="add">
 						Add to Shopping Cart
@@ -37,3 +35,7 @@
 		</div>
 	</div>
 </div>
+
+<div>
+						Quantity <input type="text" name="quantity"/>
+					</div>

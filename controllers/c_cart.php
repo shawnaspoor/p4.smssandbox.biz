@@ -6,56 +6,27 @@ class cart_controller extends base_controller {
 			parent::__construct();
 			
 		}
-/*
-		public function products() {
-		
-			$this->template->content = View::instance('v_products');
-			$this->template->title = "Products";
 
-			#query the products table to pull the product info
-			$q = "SELECT 
-					products.productID,
-					products.productName,
-					products.pricePerUnit
-				FROM products";
-
-			#pull in the information from the db based on query
-			$product = DB::instance(DB_NAME)->select_rows($q);
-
-			#give products a definition
-			$this->template->content->product = $product;
-			
-			#render the template
-			echo $this->template;
-		}
-
-
-*/
-
-			#not sure if I need to use this, I need to check the core db controller
-
-
-		
 		
 
 		#this should be keeping all the cart info in session variables while the shopper shops	
 		public function cart () {
 			
 			$productid = $_GET['id']; //product is not confidential so it can be passed via the url
-			$quantity = $_GET['quantity']; //quantity to be passed via  the url as well
+			//quantity to be passed via  the url as well
 			$action = $_GET['action'];
 			
 			switch ($action) {
 				case "add" :
 				//this will add
-					$_SESSION['cart'][$productid][$quantity];
+					$_SESSION['cart'][$productid]++;
 
 					break;
 
 				case "remove";
-					$_SESSION['cart'][$productid][$quantity];
-						if	($_SESSION['cart'][$productid][$quantity]==0)
-							unset ($_SESSION['cart'][$productid][$quantity]);
+					$_SESSION['cart'][$productid]--;
+						if	($_SESSION['cart'][$productid]==0)
+							unset ($_SESSION['cart'][$productid]);
 
 					break;
 
@@ -65,10 +36,10 @@ class cart_controller extends base_controller {
 					break;		
 
 				}
-/*
+
 			
 			if($_SESSION['cart']) { 
-				 foreach($_SESSION['cart'][$productid] as $product => $quantity) { 
+				 foreach($_SESSION['cart'] as $product => $quantity) { 
 
 		        //get the name, description and price from the database
 		        //use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
@@ -102,49 +73,4 @@ class cart_controller extends base_controller {
 
 	}	
 	
-
-
-/*
-
-	#this is the start of the product order page, needs lots more!	
-	public function cart_order() {	
-	
-		#checking for blank fields			
-			foreach($_POST as $field => $value) {
-            	if(empty($value)  || ctype_space($value))  {
-                	#If any fields are blank, send error message
-                	Router::redirect('/cart/error');  
-            		}
-        		}       
-
-       		 #checking to see if the proudctID exists in the db
-       		 $exists = DB::instance(DB_NAME)->select_field("SELECT productID FROM product WHERE productID = '" . $_POST['productID'] . "'");
-			
-			#if that email address does not exist
-			if(!$exists) {
-				Router::redirect('/cart/error');
-			}
-				
-			else {	
-
-			#create array based on what the users input to feed into the db	
-			$data = Array(
- 
-				"productID" => $_POST['productID'], 
-				"quantity" => $_POST['quantity'] 
-				
-				);
-
-			#insert into the db
-	        DB::instance(DB_NAME)->update_or_insert_rows("order", $data);
-			
-			#refresh the page once the update is made
-			Router::redirect('/users/profile');
-			}
-	}
-
-
-*/
-
-	}
 }
