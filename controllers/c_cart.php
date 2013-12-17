@@ -47,10 +47,13 @@ class cart_controller extends base_controller {
 		        $sql = sprintf("SELECT productName, pricePerUnit FROM products WHERE productID = %d", $productid);
 		        	
 		        $result = DB::instance(DB_NAME)->select_rows($sql);
+
+		        $test_results=implode(",", $result);
 				
 				var_dump($result);
+				var_dump($test_results);
 		        //Only display the row if there is a product (though there should always be as we have already checked)
-		        if(DB::instance(DB_NAME)->select_field($result) !=null) {
+		        if(DB::instance(DB_NAME)->select_rows($result, $type='array') !=null) {
 
 		            list($productName, $pricePerUnit) = $result;
 

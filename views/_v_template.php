@@ -13,12 +13,14 @@
   <link href="/css/css-bootstrap/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="/css/css-bootstrap/bootstrap-responsive.css" />
 	<link href="/css/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
 
-  <!--javascript that needs to be in the head -->
+   <!--javascript that needs to be in the head 
+  
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="/js/jquery.validate.js" type="text/javascript"></script>
-
+  <script src="/js/jquery.validate.js" type="text/javascript"></script>-->
 
 </head>
 
@@ -95,9 +97,9 @@
 
 
 
-    <!-- javascript - Placed at the end of the document so the pages load faster -->
-    <script src="/js/orderform.js"></script>
-    <script src="/js/js-bootstrap/jquery.js"></script>
+    <!-- javascript - Placed at the end of the document so the pages load faster 
+    //<script src="/js/orderform.js"></script>
+    <script src="/js/js-bootstrap/jquery.js"></script>-->
     <script src="/js/js-bootstrap/bootstrap-alert.js"></script>
     <script src="/js/js-bootstrap/bootstrap-dropdown.js"></script>
     <script src="/js/js-bootstrap/bootstrap-button.js"></script>

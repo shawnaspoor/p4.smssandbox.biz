@@ -1,11 +1,16 @@
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="/js/jquery.validate.js" type="text/javascript"></script>
+  <script src="/js/orderform.js"></script>
+  <script src="/js/js-bootstrap/jquery.js"></script>
 <div id="wrap">
 		<div class="span11">
 			<div class="row-fluid">
 		
 			
-					<div class="signup" id="signup">
+					<div class="signup" id="signup" class="signup">
 						<h3>Sign Up</h3>
-						<form class="form-horizontal" method='Post' action='/users/p_signup' id="signup">
+						<form method='Post' action='/users/p_signup' >
 								
 									<h4>First Name</h4>
 									<div class="requiredinput">*</div><br>
@@ -79,7 +84,7 @@
 							
 							<div class="control-group">
 								<div class="controls">
-									<button type="submit" class="btn btn-primary">Sign Up</button>
+									<button id="button" type="submit" class="btn btn-primary">Sign Up</button>
 								</div>
 							</div>
 						</form>

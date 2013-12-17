@@ -1,118 +1,106 @@
-
-
-
 $(document).ready(function(){
+
+$('#button').attr('disabled', true);
 
 console.log("js is working");
 
-    $('#addInvoiceLine').attr('disabled',true);
-    $('#button').attr('disabled', true);
+});
 
+ /*-------------------------------------------------------------------------
+ 	validate input from the fields
+  --------------------------------------------------------------------------*/ 
+  //this is done using the jquery validation plugin, available at http://jqueryvalidation.org/
+ $('#signup').keyup(function() {
 
-    //check that the quantity box has input
-    $('.quantity').keyup(function () {
-		var input = $(this).val();
+	$('form').validate( {
+		
+	   rules: {
+	     first_name: {
+	       required: true,
+	       minlength: 2
+	     },
+	     last_name: {
+	       required: true,
+	       minlength: 2
 
-		if (input ==0) {
-			$('#quantityError').html("It appears you didn't specify how many you would like.");
-			$('#addInvoiceLine').attr('disabled', true);
-			$('#button').attr('disabled', true);
-		}
-		//checking that it's a number
-		else if (!$.isNumeric(input))  {
-			$('#quantityError').html("Invalid input, that isn't a number.");
-			$('#addInvoiceLine').attr('disabled', true);
+	     },
+	     phoneNo: {
+	       required: false,
+	       minlength: 10,
+	       digits:true
+	     },
 
-		}	
+	     password: {
+	       required: true,
+	       minlength: 5
+	     },
 
-		else if (input < 0) {
-			$('#quantityError').html("Invalid input, you can't order a negative amount.");
-			$('#addInvoiceLine').attr('disabled', true);
-		}
-		//everything good? go on, press the button then
-		else {
-			$('#quantityError').html("");
-			$('#addInvoiceLine').attr('disabled', false);
-		}
-	});
+	     billingAddress: {
+	       required: true,
+	       minlength: 10
+	     },
 
-	//check that the user picked a baked good to go with their quantity
-	$('#bakedGoods').blur(function() {
-			var item = $('.bakedGoods').val();
+	     billingAddress2: {
+	       required: true,
+	       minlength: 2
+	     },
+	     city: {
+	       required: true,
+	       minlength:2
+	     },
 
-			if (item != "") {
-				$('#quantityError').html("");
-			}
-			else {
-				$('#quantityError').html("It appears you didn't specify what you would like.");
-				$('#addInvoiceLine').attr('disabled', true);
-			}
-	});
-	
+	     state: {
+	       required: true,
+	       minlength:10
+	     },
+	     
+	     zipcode: {
+	       required: true,
+	       minlength:5,
+	       maxlength: 5,
+	       number:true
+	     },
+
+	     licenseNo: {
+	       required: true,
+	       minlength:8
+
+	     },
+
+	     email: {
+	       required: true,
+	       minlength:5,
+	       email: true
+	     }
+	   },
+
+	   messages: {
+	     first_name: "<br> Please enter your first name",
+	     last_name:  "<br> Please enter your last name",
+	     phoneNo:  "<br> Phone numbers can be numbers only",
+	     password:  "<br> Please enter a password that is at least 5 character long",
+	     billingAddress: "<br> Please enter a billing address.",
+	     billingAddress2:  "<br> This field needs at least 2 character. Please put a # in front of unit number if required.",
+	     city: "<br> Please enter your city",
+	     state: "<br> We need your state.",
+	     zip: "<br> Zipcodes can be numbers only",
+	     licenseNo: "<br> Legally we need to keep this on file. We appreciate your cooperation.",
+	     email: "<br> Definitely required, we need to know how to contact you to take payment."
+	   }
+	 });
 });
 
 
-/*-------------------------------------------------------------------------
-baked goods choice drop down selection
---------------------------------------------------------------------------*/
-$('.bakedGoods').change(function() {
-	
-	//which dropdown choice was made
-	var option = " ";
-	$('select option:selected').each(function() {
-		option = $(this).text() + " ";
-	}); 
-	//displaying on the screen which choice was made
-	$('#bakedGood').html(option);
-	
-});
 
-
-/*-------------------------------------------------------------------------
-add the new baked good to the invoice
---------------------------------------------------------------------------*/
-$('#addInvoiceLine').click(function() {
-
-
-	//invoice line holder
-	var orderLineItem = "";
-	var orderLineQuantity= "";
-	
-	//add the baked good & quantity to the invoice
-	orderLineItem =	'<div class="line1">' + $(".bakedGoods").val() +'</div>'+'<br>';
-	orderLineQuantity 	= '<div class="line2">'+ $(".quantity").val()+'</div>'+'<br>';
-	
-	//create the order line and add the values just chosen
-	$('#orderLineItem').after(orderLineItem);
-	$('#orderLineQuantity').after(orderLineQuantity);
-
-});
-
-/*-------------------------------------------------------------------------
-count clicks and stop it at 10 
---------------------------------------------------------------------------*/
-var count = 0;
-$("#addInvoiceLine").click(function(){
-    count++;
-
-    if (count>9) {
-    	alert("You can only include 10 invoice lines.");
-    	$('#addInvoiceLine').attr('disabled', true);
-    }
-    else {
-    	$('#quantityError').html("");
-    	$('#addInvoiceLine').attr('disabled', false);
-    }
-    
-});
 
 /*-------------------------------------------------------------------------
 add the recipient name
 --------------------------------------------------------------------------*/
-$('#name').change(function() {
+$('#first_name').change(function() {
 	//find out what they entered as their name
 	var name = $(this).val();
 
+	console.log(name);
 	var name_length=name.length;
 
 	if (name_length > 20) {
@@ -122,7 +110,7 @@ $('#name').change(function() {
 		$('#namelength').html(' ');
 	};
 
-	$('#nameOut').html(name);
+
 ;
 });
 
@@ -184,134 +172,6 @@ $('#email').change(function() {
 
   });
 
-
- /*-------------------------------------------------------------------------
- add quantity to an array
- --------------------------------------------------------------------------*/
- 
- //declare the variables and arrays
-var quantity = [];
-var quantityInput = document.getElementById("quantity");
-var bakedArray = [];
-
- //clicking the add button will trigger the update/changes
-$('#addInvoiceLine').click(function() {
-	//cast the user input from string to integer
-	var input = parseInt(quantityInput.value);
-	//pull the baked good info out
-	var bakedGood = $('.bakedGoods').val();
-
-	//put the baked good info into an array
-	bakedArray.push(bakedGood);
-
-	//push the integer into the array
-	quantity.push(input);
-
-    var total = quantity.reduce(function(a, b) {
-     	return a + b;
- 	});
- 	
-	//print the total to the invoice screen 
-	$('#total').html(total);
-
-
-	//check that total is not more than 100 and if it is disable the button
-	if (total > '99') {
-		$('#quantityError').html("You can't order more than 99 items via email. Please contact us by phone to place an order");
-		$('#addInvoiceLine').attr('disabled', true);	
-		$('#button').attr('disabled', true);
-	}
-	else {
-		$('#quantityError').html("");
-	}
-	
-});	
-
-
- /*-------------------------------------------------------------------------
- validate input from the fields
-  --------------------------------------------------------------------------*/ 
-  //this is done using the jquery validation plugin, available at http://jqueryvalidation.org/
- $('#signup').keyup(function() {
-	$('#signup').validate({
-
-	   rules: {
-	     first_name: {
-	       required: true,
-	       minlength: 2,
-
-	     },
-	     last_name: {
-	       required: true,
-	       minlength: 2,
-
-	     },
-	     phone: {
-	       required: false,
-	       minlength: 10,
-	       digits:true
-	     },
-	     password: {
-	       required: true,
-	       minlength: 5
-	     },
-	     billingAddress: {
-	       required: true,
-	       minlength: 10
-	     },
-	     billingAddress2: {
-	       required: true,
-	       minlength: 2
-	     },
-	     city: {
-	       required: true,
-	       minlength:2
-	     },
-	     state: {
-	       required: true,
-	       minlength:10
-	     },
-	     zipcode: {
-	       required: true,
-	       minlength:5,
-	       maxlength: 5,
-	       number:true
-	     },
-	     licenseNo: {
-	       required: true,
-	       minlength:8,
-
-	     },
-	     email: {
-	       required: true,
-	       minlength:5,
-	       email: true
-	     }
-	   },
-	   messages: {
-	     first_name: "<br> Please enter your first name",
-	     last_name:  "<br> Please enter your last name",
-	     phone:  "<br> Phone numbers can be numbers only",
-	     password:  "<br> Please enter a password that is at least 5 character long",
-	     billingAddress: "<br> Please enter a billing address.",
-	     billingAddress2:  "<br> This field needs at least 2 character. Please put a # in front of unit number if required.",
-	     city: "<br> Please enter your city",
-	     state: "<br> We need your state.",
-	     zip: "<br> Zipcodes can be numbers only",
-	     licenseNo: "<br> Legally we need to keep this on file. We appreciate your cooperation.",
-	     email: "<br> Definitely required, we need to know how to contact you to take payment."
-	   }
-	 });
-});
-	
-/*-------------------------------------------------------------------------
-Print the page
---------------------------------------------------------------------------*/ 
-$('#print').click(function () {
-	window.print();
-});
-
-
 /*-------------------------------------------------------------------------
 disable the submit button if there is no content/invalid content in the
 text fields and no baked goods chosen
@@ -331,41 +191,3 @@ function checkForm() {
 };
 
 $("form").change(checkForm);
-$("#addInvoiceLine").click(checkForm);
-
-
-/*-------------------------------------------------------------------------
-disable the submit button after it is clicked once
---------------------------------------------------------------------------*/ 
-$('#button').click(function() {
-	$('#button').attr('disabled', true);
-});
-	
-/*-------------------------------------------------------------------------
-submit the form for download
---------------------------------------------------------------------------*/ 
-
-$("#button").click(submitVariables);
-          
-function submitVariables() {
-    $("#link").html("");
-	$.ajax({
-		method: "POST",
-		url: "process.php",
-		data: { name: $("#name").val(), billingAddress: $("#billingAddress").val(), state: $("#state").val(), email: $("#email").val(), item_quantity: JSON.stringify(quantity), Baked_Good: JSON.stringify(bakedArray) }
-		}).done(function(returned_data) {
-			$("#link").html("Thank You! Your invoice has been received.");
-		    $("#filename").html(returned_data);
-		});
-
-
-    };
-
-/*-------------------------------------------------------------------------
-clear button
---------------------------------------------------------------------------*/ 
-$('#removeInvoiceLines').click(function() {
-    location.reload();
-});
-
-
