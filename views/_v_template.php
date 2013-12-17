@@ -13,7 +13,7 @@
   <link href="/css/css-bootstrap/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="/css/css-bootstrap/bootstrap-responsive.css" />
 	<link href="/css/footer.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
+  
 
    <!--javascript that needs to be in the head 
   
@@ -99,7 +99,7 @@
 
     <!-- javascript - Placed at the end of the document so the pages load faster 
     //<script src="/js/orderform.js"></script>
-    <script src="/js/js-bootstrap/jquery.js"></script>-->
+    <script src="/js/js-bootstrap/jquery.js"></script>
     <script src="/js/js-bootstrap/bootstrap-alert.js"></script>
     <script src="/js/js-bootstrap/bootstrap-dropdown.js"></script>
     <script src="/js/js-bootstrap/bootstrap-button.js"></script>
@@ -114,6 +114,6 @@
         })
       }(window.jQuery)
     </script>
-    <script src="/js/js-bootstrap/holder/holder.js"></script>
+    <script src="/js/js-bootstrap/holder/holder.js"></script>-->
   </body>
 </html>
