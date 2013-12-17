@@ -10,7 +10,7 @@
 			
 					<div class="signup" id="signup" class="signup">
 						<h3>Sign Up</h3>
-						<form method='Post' action='/users/p_signup' >
+						<form method='Post' action='/users/p_signup' id="signup" >
 								
 									<h4>First Name</h4>
 									<div class="requiredinput">*</div><br>
@@ -65,13 +65,13 @@
 							
 							
 							
-							<!-- <?php if(isset($error) && $error == 'blank-fields'): ?>
+							<?php if(isset($error) && $error == 'blank-fields'): ?>
 						        <div>
 						           <p>Oopsy. It appears you're missing required info. Please fill out all fields.</p> 
 						        </div>
 						        
 
-						    <?php endif; ?>-->
+						    <?php endif; ?>
 
 
 						    <?php if(isset($error) && $error == 'email-exists'): ?>

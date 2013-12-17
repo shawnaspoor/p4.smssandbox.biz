@@ -12,8 +12,8 @@ console.log("js is working");
  	validate input from the fields
   --------------------------------------------------------------------------*/ 
   //this is done using the jquery validation plugin, available at http://jqueryvalidation.org/
- $("#signup").change(function(){
-	$("#signup").validate( {
+ $("#signup").keyup(function(){
+	$("form").validate( {
 		
 	   rules: {
 	     first_name: {
@@ -156,6 +156,7 @@ add the recipient email address
 $('#email').change(function() {
 
 
+	
 
     //find out what they entered as their email
     var email = $(this).val();
