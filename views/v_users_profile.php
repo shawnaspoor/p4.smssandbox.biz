@@ -107,7 +107,7 @@
 					<?php foreach ($orders as $order): ?>
 
 						<form method="post" id="orderid" class="order">
-						    <h4><a href="/orderhistory/orderhistory"><?=$order['order_no']?></a></h4>
+						    <h4><a href="/orderhistory/orderhistory?orderid=<?=$order['order_no']?>"><?=$order['order_no']?></a></h4>
 
 						</form>
 

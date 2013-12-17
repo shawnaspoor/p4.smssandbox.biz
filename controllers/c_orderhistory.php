@@ -16,7 +16,9 @@
 				Router::redirect('/users/membersonly');
 			}
 
-			         
+			
+			$orderid = $_GET['orderid'];
+			       
 			#setup the view
 			$this->template->content = View::instance('v_orderhistory');
 			
@@ -29,7 +31,8 @@
 						on orders.productID= products.productID
 					INNER JOIN orderid
 						ON orders.order_no = orderid.order_no
-					WHERE orderid.user_id = ".$this->user->user_id. "
+					WHERE orderid.order_no = ".$orderid. " AND
+					orderid.user_id = ".$this->user->user_id. "
 					ORDER BY orders.order_no"; 
 
 			#pull the orders from the db 		
@@ -43,4 +46,5 @@
 			echo $this->template;
 
 		}
+
 	}
