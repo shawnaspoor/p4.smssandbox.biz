@@ -46,14 +46,7 @@
 
 		public function p_signup() {
 
-
-		  #Checking for blank fields
-        	foreach($_POST as $field => $value) {
-            	if(empty($value) || ctype_space($value))  {
-                	#If any fields are blank, send error message
-                	Router::redirect('/users/signup/blank-fields');  
-            		}
-        		}       
+    
 
        		 #checking to see if the email already exists in the db
        		 $exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '" . $_POST['email'] . "'");
