@@ -85,7 +85,6 @@ console.log("js is working");
 	     phoneNo:  "<br> Phone numbers can be numbers only",
 	     password:  "<br> Please enter a password that is at least 5 character long",
 	     billingAddress: "<br> Please enter a billing address.",
-	     billingAddress2:  "<br> This field needs at least 2 character. Please put a # in front of unit number if required.",
 	     city: "<br> Please enter your city",
 	     state: "<br> We need your state.",
 	     zip: "<br> Zipcodes can be numbers only",
