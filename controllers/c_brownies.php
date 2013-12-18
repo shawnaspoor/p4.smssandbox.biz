@@ -9,22 +9,15 @@ class brownies_controller extends base_controller {
 		}
 
 		
-		public function walnut() {
+		public function caramel() {
 
 			#setup the view
-			$this->template->content = View::instance('v_brownies_walnut');
-			echo $this->template->title ="Walnut Brownies";
+			$this->template->content = View::instance('v_brownies_caramel');
+			$this->template->title ="Caramel Peanut Butter Brownies";
 
-			#render the view
-			echo $this->template;
+				#pushing other views to this page
+			$this->template->content->pricestructure = View::instance('v_pricestructurebrownies');
 
-		}
-
-		public function chocolatemint() {
-
-			#setup the view
-			$this->template->content = View::instance('v_brownies_chocolatemint');
-			echo $this->template->title ="Chocolate Mint Brownies";
 
 			#render the view
 			echo $this->template;
@@ -32,30 +25,19 @@ class brownies_controller extends base_controller {
 		}
 
 
-		public function marshmallowcrunch() {
+		public function butterfinger() {
 
 			#setup the view
-			$this->template->content = View::instance('v_brownies_marshmallowcrunch');
-			echo $this->template->title ="Marshmallow Crunch Brownies";
+			$this->template->content = View::instance('v_brownies_butterfinger');
+			$this->template->title ="Butterfinger Brownies";
+
+				#pushing other views to this page
+			$this->template->content->pricestructure = View::instance('v_pricestructurebrownies');
+
 
 			#render the view
 			echo $this->template;
 
 		}
-
-
-		public function saltedcaramel() {
-
-			#setup the view
-			$this->template->content = View::instance('v_brownies_saltedcaramel');
-			echo $this->template->title ="Salted Caramel Brownies";
-
-			#render the view
-			echo $this->template;
-
-		}
-
-
-
 
 	}

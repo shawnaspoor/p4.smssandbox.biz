@@ -19,7 +19,7 @@ class index_controller extends base_controller {
 			$this->template->content = View::instance('v_index_index');
 			
 		# Now set the <title> tag
-			$this->template->title = "Now that you mention it";
+			$this->template->title = "Cookies Please";
 	
 		# CSS/JS includes
 			/*
@@ -31,12 +31,11 @@ class index_controller extends base_controller {
 	    	*/
 	      					  
         #pushing other views to this page
-			$this->template->content->loginfrag = View::instance('v_login_frag');
+			$this->template->content->pricestructure = View::instance('v_pricestructure');
 			$this->template->content->signupfrag = View::instance('v_signup_frag');   		
 		# Render the view
 			echo $this->template;
 
 	} # End of method
-	
-	
+
 } # End of class

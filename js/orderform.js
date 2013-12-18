@@ -6,8 +6,12 @@ $(document).ready(function(){
 
 console.log("js is working");
 
-
-
+//deletes anything put into the field that is not a number--used in quantity input fields
+ $(".numeric").keyup(function() {
+ 	if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
+       this.value = this.value.replace(/[^0-9\.]/g, '');
+    }
+});
  /*-------------------------------------------------------------------------
  	validate input from the fields
   --------------------------------------------------------------------------*/ 

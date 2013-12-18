@@ -12,15 +12,15 @@
 	 <!-- CSS -->
   <link href="/css/css-bootstrap/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="/css/css-bootstrap/bootstrap-responsive.css" />
-	<link href="/css/footer.css" rel="stylesheet">
+	<link href="/css/custom.css" rel="stylesheet">
   
 
-   <!--javascript that needs to be in the head 
+   <!--javascript that needs to be in the head -->
   
  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="/js/jquery.validate.js" type="text/javascript"></script>-->
+  <script src="/js/jquery.validate.js" type="text/javascript"></script>
 
 </head>
 
@@ -28,9 +28,9 @@
 
 <!--top navbar fixed to the top of the page-->
 
-   <!--<div class="navbar-wrapper">
+    <div class="navbar-wrapper">
     <!--   Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-     <!-- <div class="container">
+        <div class="container">
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
@@ -46,20 +46,25 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cookies<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="/cookies/chocolatechip">Chocolate Chip</a></li>
-                    <li><a href="/cookies/doublechocolatechip">Double Chocolate Chip</a></li>
-                    <li><a href="/cookies/peanutbutter">Peanut Butter</a></li>
-                    <li><a href="/cookies/snickerdoodle">Snickerdoodle</a></li>
+                    <li><a href="/cookies/muddybuddies">Muddy Buddies</a></li>
+                    <li><a href="/cookies/oatmealscotchies">Oatmeal Scotchies</a></li>
+                    <li><a href="/cookies/coconutoatmeal">Coconut Oatmeal Cookies</a></li>
+                
                   </ul>
                 </li>
 
                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brownies <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="/brownies/walnut">Walnut</a></li>
-                    <li><a href="/brownies/chocolatemint">Chocolate Mint</a></li>
-                    <li><a href="/brownies/marshmallowcrunch">Marshmallow Crunch</a></li>
-                    <li><a href="/brownies/saltedcaramel">Salted Caramel</a></li>
+                    <li><a href="/brownies/caramel">Caramel Peanut Butter</a></li>
+                    <li><a href="/brownies/butterfinger">Butterfingers</a></li>
+                  </ul>
+                </li>
+                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cakes and Bread <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/cakesandbread/whoopiepies">Whoopie Pies</a></li>
+                    <li><a href="/cakesandbread/pumpkinbread">Pumpkin Bread (Seasonal)</a></li>
                   </ul>
                 </li>
                 <?php if($user): ?>
@@ -69,8 +74,8 @@
                 <li><a href="/users/login">Login</a></li>
                  <li><a href="/users/signup">Sign Up</a></li>
                <?php endif; ?>
-                <li><a href="/about">Contact</a></li>
-                <li><a href="/contact">Shopping Cart</a></li>
+                
+                <li><a href="/cart/cart">Shopping Cart</a></li>
              </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -87,18 +92,18 @@
 
         		<?php if(isset($client_files_body)) echo $client_files_body; ?>
         		
+</div>
 
-          </div>
-
-            <footer class="container">
-                  <p>CSCIE-15 Project4 - Shawna Spoor</p>
-            </footer>
-          </div>
-
+    <footer class="container">
+      <p ><a href="mailto:kat@cookiespls.com">Contact Us</a> | CookiePls &reg; </p> 
+       <p >CSCIE-15 Project 4 - Shawna Spoor</p>
+    </footer>
+  
 
 
-    <!-- javascript - Placed at the end of the document so the pages load faster 
-    //<script src="/js/orderform.js"></script>
+
+    <!-- javascript - Placed at the end of the document so the pages load faster -->
+    <script src="/js/orderform.js"></script>
     <script src="/js/js-bootstrap/jquery.js"></script>
     <script src="/js/js-bootstrap/bootstrap-alert.js"></script>
     <script src="/js/js-bootstrap/bootstrap-dropdown.js"></script>
@@ -114,6 +119,6 @@
         })
       }(window.jQuery)
     </script>
-    <script src="/js/js-bootstrap/holder/holder.js"></script>-->
+    <script src="/js/js-bootstrap/holder/holder.js"></script>
   </body>
 </html>

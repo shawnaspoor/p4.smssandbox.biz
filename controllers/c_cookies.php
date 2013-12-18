@@ -9,22 +9,29 @@ class cookies_controller extends base_controller {
 		}
 
 		
-		public function chocolatechip() {
+		public function muddybuddies() {
 
 			#setup the view
-			$this->template->content = View::instance('v_cookies_chocolatechip');
-			echo $this->template->title ="Chocolate Chip Cookies";
+			$this->template->content = View::instance('v_cookies_muddybuddies');
+			$this->template->title ="Muddy Buddies";
+
+			#pushing other views to this page
+			$this->template->content->pricestructure = View::instance('v_pricestructure');
 
 			#render the view
 			echo $this->template;
 
 		}
 
-		public function doublechocolatechip() {
+		public function oatmealscotchies() {
 
 			#setup the view
-			$this->template->content = View::instance('v_cookies_doublechocolatechip');
-			echo $this->template->title ="Double Chocolate Chip Cookies";
+			$this->template->content = View::instance('v_cookies_oatmealscotchies');
+			$this->template->title ="Oatmeal Scotchies";
+
+			#pushing other views to this page
+			$this->template->content->pricestructure = View::instance('v_pricestructure');
+
 
 			#render the view
 			echo $this->template;
@@ -32,11 +39,15 @@ class cookies_controller extends base_controller {
 		}
 
 
-		public function peanutbutter() {
+		public function coconutoatmeal() {
 
 			#setup the view
-			$this->template->content = View::instance('v_cookies_peanutbutter');
-			echo $this->template->title ="Peanut Butter Cookies";
+			$this->template->content = View::instance('v_cookies_coconutoatmeal');
+			$this->template->title ="Coconut Oatmeal Cookies";
+
+			#pushing other views to this page
+			$this->template->content->pricestructure = View::instance('v_pricestructure');
+
 
 			#render the view
 			echo $this->template;
@@ -44,16 +55,6 @@ class cookies_controller extends base_controller {
 		}
 
 
-		public function snickerdoodle() {
-
-			#setup the view
-			$this->template->content = View::instance('v_cookies_snickerdoodle');
-			echo $this->template->title ="Snickerdoodle Cookies";
-
-			#render the view
-			echo $this->template;
-
-		}
 
 
 

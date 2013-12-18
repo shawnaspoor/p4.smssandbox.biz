@@ -18,7 +18,16 @@
 
 			
 			$orderid = $_GET['orderid'];
-			       
+
+			#check that the orderid pass in the url belongs to this user and exists
+			$exists = DB::instance(DB_NAME)->select_field("SELECT order_no FROM orders WHERE order_no = ". $orderid);
+						       
+			$rightcustomer = DB::instance(DB_NAME)->select_field("SELECT user_id FROM orderid WHERE order_no = ". $orderid);
+				       
+			if ($rightcustomer != $this->user->user_id) {
+				echo( "There are no order numbers of that number associated with your account.");
+					return;
+			};
 			#setup the view
 			$this->template->content = View::instance('v_orderhistory');
 			
@@ -35,9 +44,12 @@
 					orderid.user_id = ".$this->user->user_id. "
 					ORDER BY orders.order_no"; 
 
+				
+		
+
 			#pull the orders from the db 		
 			$orders = DB::instance(DB_NAME)->select_rows($q);
-
+			
 			#store the input into this var
 			$this->template->content->orders = $orders;
 			

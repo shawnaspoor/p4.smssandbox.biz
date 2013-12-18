@@ -7,32 +7,18 @@
 		<!--left-side with the baked goods order drop downs -->
 		<div class="row" >
 			<div class="span4" id="left-side">
-				<form action="process.php" method="post">	
-					<h4>Name</h4><div class="requiredinput">*</div><br>
-					<input type="text" id ="name" name="name" class="required" maxlength="25">
-					<div class="length" id="namelength"></div>
-					
-
-					<h4>Billing Address</h4><div class="requiredinput">*</div><br>
-					<input type="text" id ="billingAddress" name="billingAddress" maxlength="30">
-					<div class="length" id ="billingaddress"></div>	
-
-
-					<h4>State, City, Zipcode</h4><div class="requiredinput">*</div><br>
-					<input type="text" id ="state" name="state" maxlength="30">
-					<div class="length" id="statelength"></div>
-
-					<h4>Email Address</h4><div class="requiredinput">*</div><br>
-					<input type="text" id ="email" name="email" maxlength="30">
-					<div class="length" id="emaillength"></div>
-
-					<h4>Choose a yummy!</h4>
+				<form action="process.php" method="post">
+					<h4>Choose a product</h4>
 
 					<select class="bakedGoods" id="bakedGoods">
 						<option >Chocolate Chip Cookies</option>
 						<option>Brownies</option>
 						<option>Peanut Butter Cookies</option>
 						<option>Snickerdoodles</option>
+					</select>
+					<select class="dose" id="dose">
+						<option >25mg</option>
+						<option>50mg</option>
 					</select>
 					<br> <br>
 					<p class="inline" >Please specify how many </p><div class="inline"  id="bakedGood"></div><p class="inline" > you would like.</p>
