@@ -56,7 +56,7 @@ console.log("js is working");
 
 	     state: {
 	       required: true,
-	       minlength:10
+	       minlength:2
 	     },
 	     
 	     zipcode: {
