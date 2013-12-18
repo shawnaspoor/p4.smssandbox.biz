@@ -46,8 +46,8 @@ console.log("js is working");
 	     },
 
 	     billingAddress2: {
-	       required: true,
-	       minlength: 2
+	       required: false
+	      
 	     },
 	     city: {
 	       required: true,
@@ -168,8 +168,8 @@ $('#email').change(function() {
 
   	var email_length=email.length;
 
-	if (email_length > 25) {
-		$('#emaillength').html("The email field doesn't take more than 30 characters, sorry!");
+	if (email_length > 45) {
+		$('#emaillength').html("The email field doesn't take more than 50 characters, sorry!");
 	}
 	else {
 		$('#emaillength').html(' ');
