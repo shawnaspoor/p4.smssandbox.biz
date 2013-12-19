@@ -30,9 +30,7 @@ class index_controller extends base_controller {
 	    	$this->template->client_files_body = Utils::load_client_files($client_files_body);   
 	    	*/
 	      					  
-        #pushing other views to this page
-			$this->template->content->pricestructure = View::instance('v_pricestructure');
-			$this->template->content->signupfrag = View::instance('v_signup_frag');   		
+		
 		# Render the view
 			echo $this->template;
 

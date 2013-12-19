@@ -99,69 +99,47 @@ class cart_controller extends base_controller {
 	
 
 	public function cart_submit() {
-
-		if($this->user) {
-
-				$userid = array(
-					"user_id" => $this->user->user_id);
-
-				//echo $userid;
-
-				$orderNo = DB::instance(DB_NAME)->insert_row("orderid", $userid);
 				
-				echo $orderNo;
+			#insert into orderid table and pull the order_no
+			$userid = array("user_id" => $this->user->user_id);
 
-				
-			
+			$orderNo = DB::instance(DB_NAME)->insert_row("orderid", $userid);
 
-		#insert into orderid table and pull the order_no
-
-
-
-/*
+			#pull the session variables and put them in the db
         		$keys = array_keys($_SESSION["cart"]);
+
 				 foreach($keys as $key) { 
 				 	$array = explode(",",$key);
 				 	$item_id = $array[0];
 				 	$quantity= $_SESSION["cart"]["$item_id"];  
 
-				 	
-            	if(empty($value) || ctype_space($value))  {
-                	#If any fields are blank, send error message
-                	Router::redirect('/users/cart/error');  
-            		}
-        		
-
-
-       			$results = DB::instance(DB_NAME)->select_rows($sql);
-				
-			else {	
-				
-				     	
+								     	
         			#DB info not submitted by the user
-        			$_POST['created'] = Time::now();
-
+        			$_POST['order_no'] = $orderNo;
+        			$_POST['productID'] = $item_id;
+        			$_POST['quantity'] = $quantity;
+				 	
 					#sotre the information into a var
-					$results = DB::instance(DB_NAME)->insert("orders", $_POST);
+					$insert = DB::instance(DB_NAME)->insert("orders", $_POST);
+				}
+				
 
-					#send them to a page so they can login and get postin
-					Router::redirect('/cart/orderrecieved');
+			#send them to a page so they can login and get postin
+			Router::redirect('/cart/orderrecieved');
 
-			}*/
+			
 
 			#setup the view
 			$this->template->content = View::instance('v_cart_submit');
 			#render the view
 			echo $this->template;
 
-			}
 			
-			else 
-			{
-
-				Router::redirect('/users/membersonly');
-			}
+			
+			//}
 
 
 		}  
 }
+
+
