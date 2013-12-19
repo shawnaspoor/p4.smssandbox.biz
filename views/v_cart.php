@@ -23,7 +23,7 @@
                                         <td class="unit_price"><?=$line[0]['pricePerUnit']?></td>  
                                         <td class="unit_price"><?=$line[0]['quantity']?></td>  
                                         <td class="extended_price"><!--$<?php echo $total; ?>--></td>  
-                                        <td class="remove center">
+                                        <td class="remove">
                                             <form  action="/cart/cart" method="get" >
                                                 <input type="hidden" name="id" value="<?=$line[0]['productID']?>">
                                                 <button type ="submit" name="action" value="remove" id="<?=$line[0]['productID']?>" >remove</button>

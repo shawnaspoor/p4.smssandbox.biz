@@ -11,34 +11,27 @@ class cart_controller extends base_controller {
 
 		#this should be keeping all the cart info in session variables while the shopper shops	
 		public function cart () {
+
 			$productid = $_GET['id']; //product is not confidential so it can be passed via the url
 			$action = $_GET['action'];
 			
 			switch ($action) {
-				case "add" :
+				case "add":
 				//this will add
-					$_SESSION['cart'][$productid];
-
+					$_SESSION['cart'][$productid]++;
 					break;
 
-				case "remove";
+				case "remove":
 					$_SESSION['cart'][$productid]--;
 						if	($_SESSION['cart'][$productid]==0)
 							unset ($_SESSION['cart'][$productid]);
 
 					break;
 
-					case "empty";
-						unset($_SESSION['cart']);
-
-					break;		
-
 				}
 
 
-			#setup the view
-			$this->template->content = View::instance('v_cart');
-
+			
 			#build the cart contents
 			if($_SESSION['cart']) { 
 					$totalAll= 0;
@@ -48,10 +41,7 @@ class cart_controller extends base_controller {
 					 	$array = explode(",", $key);
 					 	$item_id = $array[0];
 					 	$quantity= $_SESSION["cart"]["$item_id"];
-					 	echo $item_id . " " . $quantity . "<br />";
-					 	//echo $product . "  " . $quantity ."<br>";
 
-					 	//var_dump($array);
 					 
 					$sql = sprintf("SELECT * , $quantity as quantity
 									FROM products 
@@ -63,15 +53,10 @@ class cart_controller extends base_controller {
 			        //use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
 					
 			        $results = DB::instance(DB_NAME)->select_rows($sql);
-			        var_dump($results);
-
-			        
-
-			     
-			    $lines[$lineNo++] = $results;
+			        #pushing all the results into an array that the view can reference
+				    $lines[$lineNo++] = $results;
 			    }
 
-			   //var_dump($lines);
 				
 		       }  
 		        
@@ -81,16 +66,18 @@ class cart_controller extends base_controller {
 				{	
 					//otherwise tell the user they have no items in their cart
 				    
-					echo "You have no items in your shopping cart.";
+					Router::redirect("/cart/error");
+
 
 				}
 	
-		
+		#setup the view
+		$this->template->content = View::instance('v_cart');
+		$this->template->title = "Shopping Cart";
+
 		#store the input into this var
 		$this->template->content->lines = $lines;
-	
 		
-		//echo $this->template->title ="Cart";
 
 		#render the view
 		echo $this->template;
@@ -148,6 +135,21 @@ class cart_controller extends base_controller {
 
 
 		}  
+
+
+
+		public function error() {
+
+			#setup the view
+			$this->template->content = View::instance('v_cart_error');
+			$this->template->title ="Cart Error";
+
+			#render the view
+			echo $this->template;
+
+		}
+
+
 }
 
 

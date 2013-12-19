@@ -28,9 +28,9 @@
 
 <!--top navbar fixed to the top of the page-->
 
-  <!--  <div class="navbar-wrapper">
+  <div class="navbar-wrapper">
     <!--   Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <!--  <div class="container">
+      <div class="container">
 
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
