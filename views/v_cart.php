@@ -1,6 +1,6 @@
 <div id="wrap">
     <div class="row-fluid">
-       <div class="span4"> 
+       <div class="span12"> 
             <h1>Shopping Cart</h1>  
                       
                         <form action="/cart/cart_submit" method="post"> 
@@ -22,7 +22,11 @@
                                         <td class="unit_price"><?=$result['pricePerUnit']?></td>  
                                         <td class="unit_price"><?php echo $quantity ?></td>  
                                         <td class="extended_price"><!--$<?php echo $total; ?>--></td>  
-                                        <td class="remove center"><input type="checkbox" name="remove[]" value="" /></td>  
+                                        <td class="remove center">
+                                            <form  action="/cart/cart" method="get" >
+                                                <button type ="submit" name="action" value="remove" id="<?=$result['productID']?>" >remove</button>
+                                            </form>
+                                        </td>  
                                     </tr>  
               
                               <?php endforeach; ?>

@@ -259,9 +259,7 @@
 			#setup the view
 			$this->template->content = View::instance('v_users_membersonly');
 			 #pushing other views to this page
-			$this->template->content->loginfrag = View::instance('v_login_frag');
-			$this->template->content->signupfrag = View::instance('v_signup_frag');   		
-
+			
 			#give the page a title
 			$this->template->title = "Members Only";
 			#display the view
