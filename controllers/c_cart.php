@@ -125,10 +125,10 @@ class cart_controller extends base_controller {
 				
 
 			#send them to a page so they can login and get postin
-			Router::redirect('/cart/orderrecieved');
+			#Router::redirect('/cart/orderrecieved');
 
-			
-
+			session_destroy();
+				
 			#setup the view
 			$this->template->content = View::instance('v_cart_submit');
 			#render the view
