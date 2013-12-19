@@ -15,16 +15,17 @@
                                     <th>Remove</th>  
 
                                 </tr>
-                                <?php foreach ($results as $result): ?>
+
+                                <?php foreach ($lines as $line): ?>
                                   
                                    <tr>              
-                                        <td class="item_name"><?=$result['productName']?></td>  
-                                        <td class="unit_price"><?=$result['pricePerUnit']?></td>  
-                                        <td class="unit_price"><?php echo $quantity ?></td>  
+                                        <td class="item_name"><?=$line[0]['productName']?></td>  
+                                        <td class="unit_price"><?=$line[0]['pricePerUnit']?></td>  
+                                        <td class="unit_price"><?=$line[0]['quantity']?></td>  
                                         <td class="extended_price"><!--$<?php echo $total; ?>--></td>  
                                         <td class="remove center">
                                             <form  action="/cart/cart" method="get" >
-                                                <button type ="submit" name="action" value="remove" id="<?=$result['productID']?>" >remove</button>
+                                                <button type ="submit" name="action" value="remove" id="<?=$line[0]['productID']?>" >remove</button>
                                             </form>
                                         </td>  
                                     </tr>  

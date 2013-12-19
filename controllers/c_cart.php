@@ -17,7 +17,7 @@ class cart_controller extends base_controller {
 			switch ($action) {
 				case "add" :
 				//this will add
-					$_SESSION['cart'][$productid]++;
+					$_SESSION['cart'][$productid];
 
 					break;
 
@@ -41,17 +41,19 @@ class cart_controller extends base_controller {
 
 			#build the cart contents
 			if($_SESSION['cart']) { 
-				var_dump($_SESSION['cart']);
 
+					$lineNo = 0;
 					$keys = array_keys($_SESSION["cart"]);
 					 foreach($keys as $key) { 
-					 	$array = explode(",",$key);
+					 	$array = explode(",", $key);
 					 	$item_id = $array[0];
 					 	$quantity= $_SESSION["cart"]["$item_id"];
-					 	//echo $item_id . " " . $quantity . "<br />";
+					 	echo $item_id . " " . $quantity . "<br />";
 					 	//echo $product . "  " . $quantity ."<br>";
+
+					 	//var_dump($array);
 					 
-					$sql = sprintf("SELECT * 
+					$sql = sprintf("SELECT * , $quantity as quantity
 									FROM products 
 									WHERE productID = %d", $item_id);	
 					
@@ -63,9 +65,14 @@ class cart_controller extends base_controller {
 			        $results = DB::instance(DB_NAME)->select_rows($sql);
 			        var_dump($results);
 
-			        
-			     }
-		       }
+			      
+			     
+			    $lines[$lineNo++] = $results;
+			    }
+
+			   //var_dump($lines);
+				
+		       }  
 		        
 
 		       //Only display the row if there is a product (though there should always be as we have already checked)
@@ -79,8 +86,8 @@ class cart_controller extends base_controller {
 	
 		
 		#store the input into this var
-		$this->template->content->results = $results;
-		$this->template->content->quantity = $quantity;
+		$this->template->content->lines = $lines;
+	
 		
 		//echo $this->template->title ="Cart";
 
