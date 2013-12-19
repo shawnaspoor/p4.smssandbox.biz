@@ -41,7 +41,7 @@ class cart_controller extends base_controller {
 
 			#build the cart contents
 			if($_SESSION['cart']) { 
-
+					$totalAll= 0;
 					$lineNo = 0;
 					$keys = array_keys($_SESSION["cart"]);
 					 foreach($keys as $key) { 
@@ -65,7 +65,8 @@ class cart_controller extends base_controller {
 			        $results = DB::instance(DB_NAME)->select_rows($sql);
 			        var_dump($results);
 
-			      
+			        
+
 			     
 			    $lines[$lineNo++] = $results;
 			    }
