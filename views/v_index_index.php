@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/images/pumpkinbreadcarousel.jpg" alt="Chocolate Chip" width="100%">
+          <img src="/images/pumpkinbreadcarousel.jpg" alt="Pumpkin Bread" width="100%">
           <div class="container">
             <div class="carousel-caption">
               <h1>Pumpkin Bread</h1>
