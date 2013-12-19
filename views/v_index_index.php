@@ -2,7 +2,7 @@
      <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/images/cookiespleaselogocarousel.png" alt="Cookies Please" width="800px">
+          <img src="/images/cookiespleaselogocarousel.png" alt="Cookies Please" >
           <div class="container">
             <div class="carousel-caption">
 
@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/images/carouselimage2.png" alt="Cookies, Brownies, Whoopie Pies" width="800px">
+          <img src="/images/carouselimage2.png" alt="Cookies, Brownies, Whoopie Pies"  >
           <div class="container">
             <div class="carousel-caption">
               <h1>Decadent cookies that help you get the dose you need in an easy way.</h1>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/images/pumpkinbreadcarousel.jpg" alt="Pumpkin Bread" width="800px">
+          <img src="/images/pumpkinbreadcarousel.jpg" alt="Pumpkin Bread"  >
           <div class="container">
             <div class="carousel-caption">
               <h1>Pumpkin Bread</h1>
