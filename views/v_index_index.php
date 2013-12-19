@@ -8,7 +8,7 @@
 
               <p class="lead"><br/>
               <br/>Your online source for my most delicious medical marijuana baked goods in Southern California.</p>
-              <a class="btn btn-large btn-primary" href="#">Order today</a>
+              <a class="btn btn-large btn-primary" href="/users/signup">Sign Up and Order today!</a>
             </div>
           </div>
         </div>
@@ -16,19 +16,19 @@
           <img src="/images/carouselimage2.png" alt="Cookies, Brownies, Whoopie Pies" width="100%">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <h1>Decadent cookies that help you get the dose you need in an easy way.</h1>
+              
+              <a class="btn btn-large btn-primary" href="/cookies/coconutoatmeal">Buy today</a>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="chocolatechip.jpg" alt="Chocolate Chip" width="100%">
+          <img src="/images/pumpkinbreadcarousel.jpg" alt="Chocolate Chip" width="100%">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+              <h1>Pumpkin Bread</h1>
+              <p class="lead">Order this seasonal favorite while you can!</p>
+              <a class="btn btn-large btn-primary" href="/cakesandbread/pumpkinbread">Buy a slice today</a>
             </div>
           </div>
         </div>
