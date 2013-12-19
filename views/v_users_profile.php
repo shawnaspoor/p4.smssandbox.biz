@@ -74,30 +74,17 @@
 									<input type="text" id ="licenseNo" name="licenseNo" maxlength="30" value='<?php echo $user->licenseNo; ?>'>
 									<div class="length" id="licenselength"></div>
 							
-
+									<br />	
 								<div class="control-group">
-								<div class="controls">
+									<div class="controls">
 									<button type="submit" class="btn btn-primary">Update Info</button>
 								</div>
-								<br>
-							
 							
 							</div>
 						</form>
 								
-						<h4>Who doesn't like a profile photo?</h4>
-				
-						<?php if ($user->avatar =='placeholder.jpg'): ?>
-							display <img src="/uploads/avatars/example.gif" alt="Camera Shy Photo">';
-						 <?php endif; ?>
-						<img class="avatar" src="<?= $user->avatar ?>" alt="<?=$user->first_name ?>"><br> <br>
+						
 			
-				 
-						<form action="/users/profile_photo" method="post" enctype="multipart/form-data" >
-						<input class="btn btn-default" type="file" name="avatar">
-						<input class="btn btn-success" type='submit'>
-						</form>
-
 
 
 		</div>	
