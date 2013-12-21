@@ -102,10 +102,10 @@ $('#first_name').change(function() {
 	var name_length=name.length;
 
 	if (name_length > 20) {
-		$('.namelength').html('Names can be no longer than 25 characters, sorry!');
+		$('.firstlength').html('Names can be no longer than 25 characters, sorry!');
 	}
 	else {
-		$('.namelength').html(' ');
+		$('.firstlength').html(' ');
 	};
 
 
@@ -119,10 +119,10 @@ $('#last_name').change(function() {
 	var name_length=name.length;
 
 	if (name_length > 20) {
-		$('.namelength').html('Names can be no longer than 25 characters, sorry!');
+		$('.lastlength').html('Names can be no longer than 25 characters, sorry!');
 	}
 	else {
-		$('.namelength').html(' ');
+		$('.lastlength').html(' ');
 	};
 
 
