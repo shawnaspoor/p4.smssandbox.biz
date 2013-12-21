@@ -11,9 +11,8 @@
                                     <th>Item</th>  
                                     <th>Unit Price</th> 
                                     <th>Quantity</th> 
-                                    <th>Total</th>  
                                     <th>Remove</th>  
-
+ 
                                 </tr>
 
                                 <?php foreach ($lines as $line): ?>
@@ -21,17 +20,25 @@
                                    <tr>              
                                         <td class="item_name"><?=$line[0]['productName']?></td>  
                                         <td class="unit_price"><?=$line[0]['pricePerUnit']?></td>  
-                                        <td class="unit_price"><?=$line[0]['quantity']?></td>  
-                                        <td class="extended_price"><!--$<?php echo $total; ?>--></td>  
+                                        <td class="unit_price"><?=$line[0]['quantity']?></td> 
                                         <td class="remove">
                                             <form  action="/cart/cart" method="get" >
-                                                <input type="hidden" name="id" value="<?=$line[0]['productID']?>">
-                                                <button type ="submit" name="action" value="remove" id="<?=$line[0]['productID']?>" >remove</button>
+                                                <input type="hidden" name="id" value="<?=$line[0]['productID']?>" value="remove">
+                                                <button type ="submit" name="action" value="remove">remove</button>
                                             </form>
-                                        </td>  
+                                         </td>  
                                     </tr>  
               
                               <?php endforeach; ?>
+                              <tr>
+                                    <td >
+                                        Total:
+                                    </td>
+                                    <td colspan=3;>
+                                         $<?=$totalAll?>
+                                    </td>
+                                    
+                              </tr>
                           </table>
                     
                      <input id="button" type="submit" value="Submit Order" />  

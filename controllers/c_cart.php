@@ -22,9 +22,7 @@ class cart_controller extends base_controller {
 					break;
 
 				case "remove":
-					$_SESSION['cart'][$productid]--;
-						if	($_SESSION['cart'][$productid]==0)
-							unset ($_SESSION['cart'][$productid]);
+					unset ($_SESSION['cart'][$productid]);
 
 					break;
 
@@ -53,11 +51,20 @@ class cart_controller extends base_controller {
 			        //use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
 					
 			        $results = DB::instance(DB_NAME)->select_rows($sql);
-			        #pushing all the results into an array that the view can reference
-				    $lines[$lineNo++] = $results;
-			    }
 
-				
+			        #pushing all the results into an array that the view can reference
+				   
+
+			    	$pricePerUnit = DB::instance(DB_NAME)->select_field('SELECT pricePerUnit
+			    														 FROM products
+			    														 WHERE productID = '.$item_id);
+
+			    	$totalAll= $totalAll + ($pricePerUnit*$quantity);
+
+					$lines[$lineNo++] = $results;
+
+
+				}
 		       }  
 		        
 
@@ -77,12 +84,14 @@ class cart_controller extends base_controller {
 
 		#store the input into this var
 		$this->template->content->lines = $lines;
-		
+		$this->template->content->totalAll = $totalAll;
 
 		#render the view
 		echo $this->template;
 
 	}	
+
+
 	
 
 	public function cart_submit() {
