@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="span4">	
 					<div class="product">
-						<img src="/images/whoopiepies.jpg" />
+						<img src="/images/whoopiepies.jpg" alt="whoopie pies"/>
 					</div>
 				</div>
 				<div class="span6">
