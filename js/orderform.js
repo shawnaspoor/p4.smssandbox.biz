@@ -168,7 +168,7 @@ $('#city').change(function() {
 
 	var city_length=city.length;
 
-	if (city_length > 30 {
+	if (city_length > 30) {
 		$('#citylength').html("City names cannot be longer than 30 characters.");
 	}
 	else {
