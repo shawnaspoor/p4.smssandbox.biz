@@ -81,9 +81,10 @@
 							<div class="control-group">
 								<div class="controls">
 									<button id="button" type="submit" class="btn btn-primary">Sign Up</button>
+								</div>
 							</div>
-					</div>
 				</form>
+			</div>
 		</div>
 	</div>
 </div>
