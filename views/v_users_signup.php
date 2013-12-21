@@ -36,10 +36,10 @@
 
 									<h4>Street Address</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="billingAddress" name="billingAddress" maxlength="30" class="required">
-									<div class="length" class ="billingaddresslength"></div>	
+									<div class="length" class="billingaddresslength"></div>	
 
 									<h4>Street Address 2</h4><br>
-									<input type="text" id ="billingAddress2" name="billingAddress2" maxlength="30">
+									<input type="text" id="billingAddress2" name="billingAddress2" maxlength="30">
 									<div class="length"></div>	
 
 									<h4>City</h4><div class="requiredinput">*</div><br>
