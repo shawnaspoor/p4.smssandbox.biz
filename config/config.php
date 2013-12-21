@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'shawna@spoor.org'); 
 
 # Default DB name for this app
-	define('DB_NAME', "p4_smssandbox_biz"); 
+	define('DB_NAME', "smssandb_p4_smssandbox_biz"); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
