@@ -31,7 +31,7 @@
 			
 									<h4>Password</h4>
 									<div class="requiredinput">*</div><br>
-									<input type="text" for="inputPassword" id ="inputPassword" name="password" class="required" >
+									<input type="text" id ="inputPassword" name="password" class="required" >
 									<div class="length" id="passwordlength"></div>
 
 									<h4>Street Address</h4><div class="requiredinput">*</div><br>
@@ -81,11 +81,10 @@
 							<div class="control-group">
 								<div class="controls">
 									<button id="button" type="submit" class="btn btn-primary">Sign Up</button>
-								</div>
 							</div>
-						</form>
 					</div>
-				</div>
-			</div>
+				</form>
 		</div>
+	</div>
 </div>
+
