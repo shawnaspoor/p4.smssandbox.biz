@@ -2,10 +2,6 @@ $(document).ready(function(){
 
 //$('#button').attr('disabled', true);
 
-
-
-console.log("js is working");
-
 //deletes anything put into the field that is not a number--used in quantity input fields
  $(".numeric").keyup(function() {
  	if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
@@ -96,7 +92,7 @@ console.log("js is working");
 
 
 /*-------------------------------------------------------------------------
-add the recipient name
+check recipient input
 --------------------------------------------------------------------------*/
 $('#first_name').change(function() {
 	//find out what they entered as their name
@@ -106,19 +102,50 @@ $('#first_name').change(function() {
 	var name_length=name.length;
 
 	if (name_length > 20) {
-		$('#namelength').html('Names can be no longer than 25 characters, sorry!');
+		$('.namelength').html('Names can be no longer than 25 characters, sorry!');
 	}
 	else {
-		$('#namelength').html(' ');
+		$('.namelength').html(' ');
+	};
+
+
+;
+});
+$('#last_name').change(function() {
+	//find out what they entered as their name
+	var name = $(this).val();
+
+	console.log(name);
+	var name_length=name.length;
+
+	if (name_length > 20) {
+		$('.namelength').html('Names can be no longer than 25 characters, sorry!');
+	}
+	else {
+		$('.namelength').html(' ');
 	};
 
 
 ;
 });
 
-/*-------------------------------------------------------------------------
-add the recipient billing address
---------------------------------------------------------------------------*/
+
+$('#phoneNo').change(function() {
+	//find out what they entered as their address
+	var phoneNo = $(this).val();
+
+	$('#phoneNo').html(phoneNo);
+
+	var phoneNo_length=phoneNo.length;
+
+	if (phoneNo_length > 13) {
+		$('#phoneNolength').html("Phone numbers should be no longer than 10 digits.");
+	}
+	else {
+		$('#phoneNolength').html(' ');
+	};
+});
+
 $('#billingAddress').change(function() {
 	//find out what they entered as their address
 	var billingAddress = $(this).val();
@@ -128,12 +155,31 @@ $('#billingAddress').change(function() {
 	var billingAddress_length=billingAddress.length;
 
 	if (billingAddress_length > 25) {
-		$('#billingaddress').html("The billing address field doesn't take more than 30 characters, sorry!");
+		$('.billingaddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
 	}
 	else {
-		$('#billingaddress').html(' ');
+		$('.billingaddresslength').html(' ');
 	};
 });
+
+$('#city').change(function() {
+	//find out what they entered as their address
+	var city = $(this).val();
+
+	var city_length=city.length;
+
+	if (city_length > 30 {
+		$('#citylength').html("City names cannot be longer than 30 characters.");
+	}
+	else {
+		$('#citylength').html(' ');
+	};
+
+
+
+	
+});
+
 $('#state').change(function() {
 	//find out what they entered as their address
 	var state = $(this).val();
@@ -141,26 +187,33 @@ $('#state').change(function() {
 	var state_length=state.length;
 
 	if (state_length > 25) {
-		$('#statelength').html("The state, city, and zipcode field doesn't take more than 30 characters, sorry!");
+		$('#statelength').html("The state should only be two letters long.");
 	}
 	else {
 		$('#statelength').html(' ');
 	};
 
-	$('#stateOut').html(state);
+	
+});
+
+$('#zipcode').change(function() {
+	//find out what they entered as their address
+	var zipcode = $(this).val();
+
+	var zipcode_length=zipcode.length;
+
+	if (zipcode_length > 5) {
+		$('#zipcodelength').html("The zip should only be 5 numbers long.");
+	}
+	else {
+		$('#zipcodelength').html(' ');
+	};
 
 	
 });
 
-/*-------------------------------------------------------------------------
-add the recipient email address
---------------------------------------------------------------------------*/
 
 $('#email').change(function() {
-
-
-	
-
     //find out what they entered as their email
     var email = $(this).val();
 
@@ -174,7 +227,6 @@ $('#email').change(function() {
 		$('#emaillength').html(' ');
 	};
   
-    $('#emailOut').html(email);
 
   });
 

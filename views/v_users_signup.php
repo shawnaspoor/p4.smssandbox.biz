@@ -4,19 +4,19 @@
 			<div class="row-fluid">
 		
 			
-					<div class="signup" id="signup" class="signup">
+					<div class="signup">
 						<h3>Sign Up</h3>
 						<form method='Post' action='/users/p_signup' id="signup" >
 								
 									<h4>First Name</h4>
 									<div class="requiredinput">*</div><br>
 									<input type="text" id ="first_name" name="first_name" class="required" maxlength="25">
-									<div class="length" id="namelength"></div>
+									<div class="length" class="namelength"></div>
 							
 									<h4>Last Name</h4>
 									<div class="requiredinput">*</div><br>
 									<input type="text" id ="last_name" name="last_name" class="required" maxlength="25">
-									<div class="length" id="namelength"></div>
+									<div class="length" class="namelength"></div>
 					
 				
 									<h4>Email Address</h4>
@@ -27,20 +27,20 @@
 
 									<h4>Phone Number</h4><br>
 									<input type="text" id ="phoneNo" name="phoneNo" maxlength="30" class="required">
-									<div class="length" id ="phoneNo"></div>	
+									<div class="length" id ="phoneNolength"></div>	
 			
 									<h4>Password</h4>
 									<div class="requiredinput">*</div><br>
-									<input type="text" for="inputPassword" id ="inputPassword" name="password" class="required" maxlength="30">
+									<input type="text" for="inputPassword" id ="inputPassword" name="password" class="required" maxlength="14">
 									<div class="length" id="paswwordlength"></div>
 
 									<h4>Street Address</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="billingAddress" name="billingAddress" maxlength="30" class="required">
-									<div class="length" id ="billingaddress"></div>	
+									<div class="length" class ="billingaddresslength"></div>	
 
 									<h4>Street Address 2</h4><br>
-									<input type="text" id ="billingAddress2" name="billingAddress2" maxlength="30">
-									<div class="length" id ="billingaddress2"></div>	
+									<input type="text" id ="billingAddress" name="billingAddress2" maxlength="30">
+									<div class="length" class ="billingaddresslength"></div>	
 
 									<h4>City</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="city" name="city" maxlength="30" class="required">
@@ -51,7 +51,7 @@
 									<div class="length" id="statelength"></div>
 									
 									<h4>Zipcode</h4><div class="requiredinput">*</div><br>
-									<input type="text" id ="zipcode" name="zipcode" maxlength="30" class="required">
+									<input type="text" id ="zipcode" name="zipcode" maxlength="5" class="required">
 									<div class="length" id="zipcodelength"></div>
 
 
