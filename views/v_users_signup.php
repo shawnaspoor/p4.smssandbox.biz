@@ -40,7 +40,7 @@
 
 									<h4>Street Address 2</h4><br>
 									<input type="text" id="billingAddress2" name="billingAddress2" maxlength="30">
-									<div class="length" id="billingAddress2"></div>	
+									<div class="length" id="billingAddresslength2"></div>	
 
 									<h4>City</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="city" name="city" maxlength="30" class="required">

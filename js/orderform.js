@@ -245,6 +245,22 @@ $('#email').change(function() {
   
 
   });
+$('#licenseNo').change(function() {
+    //find out what they entered as their email
+    var licenseNo = $(this).val();
+
+
+  	var licenseNo_length=licenseNo.length;
+
+	if (licenseNo_length > 29) {
+		$('#licenselength').html("The license number field doesn't take more than 30 characters, sorry!");
+	}
+	else {
+		$('#licenselength').html(' ');
+	};
+  
+
+  });
 
 /*-------------------------------------------------------------------------
 disable the submit button if there is no content/invalid content in the
