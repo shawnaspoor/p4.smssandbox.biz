@@ -16,6 +16,8 @@ class cart_controller extends base_controller {
 
 				#setup the frag view
 				$this->template->content->unidentifieduser = View::instance('v_cart_unidentifieduser');
+				#render the view
+				echo $this->template;
 			}
 
 			$productid = $_GET['id']; //product is not confidential so it can be passed via the url
