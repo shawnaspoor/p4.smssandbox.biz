@@ -56,7 +56,7 @@
 									<div class="length" id="zipcodelength"></div>
 
 
-									<h4>License Number</h4><div class="requiredinput">*</div><br>
+									<h4>License Number (full 8 character string)</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="licenseNo" name="licenseNo" maxlength="30" class="required">
 									<div class="length" id="licenselength"></div>
 							
