@@ -5,6 +5,7 @@
 		
 			
 					<div class="signup">
+						<br />
 						<h3>Sign Up</h3>
 						<form method='Post' action='/users/p_signup' id="signup" >
 								
