@@ -155,10 +155,10 @@ $('#billingAddress').change(function() {
 	var billingAddress_length=billingAddress.length;
 
 	if (billingAddress_length > 29) {
-		$('#billingaddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
+		$('#billingAddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
 	}
 	else {
-		$('#billingaddresslength').html(' ');
+		$('#billingAddresslength').html(' ');
 	};
 });
 
