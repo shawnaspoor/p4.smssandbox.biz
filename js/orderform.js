@@ -160,9 +160,9 @@ $('#billingAddress2').change(function() {
 	//find out what they entered as their address
 	var billingAddress2 = $(this).val();
 
-	var billingAddress_length=billingAddress.length;
+	var billingAddress_length2=billingAddress2.length;
 
-	if (billingAddress_length > 29) {
+	if (billingAddress_length2 > 29) {
 		$('#billingAddresslength2').html("This field doesn't take more than 30 characters, sorry!");
 	}
 	else {
