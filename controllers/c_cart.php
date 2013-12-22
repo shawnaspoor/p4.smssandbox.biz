@@ -12,13 +12,7 @@ class cart_controller extends base_controller {
 		#this should be keeping all the cart info in session variables while the shopper shops	
 		public function cart () {
 
-			if(!$this->user) {
-
-				#setup the frag view
-				$this->template->content->unidentifieduser = View::instance('v_cart_unidentifieduser');
-				#render the view
-				echo $this->template;
-			}
+			
 
 			$productid = $_GET['id']; //product is not confidential so it can be passed via the url
 			$action = $_GET['action'];
@@ -94,9 +88,15 @@ class cart_controller extends base_controller {
 		$this->template->content->lines = $lines;
 		$this->template->content->totalAll = $totalAll;
 
+		if(!$this->user) {
+
+				#setup the frag view
+				$this->template->content->unidentifieduser = View::instance('v_cart_unidentifieduser');
+
+			};
+
 		#render the view
 		echo $this->template;
-
 	}	
 
 
