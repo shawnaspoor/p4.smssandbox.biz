@@ -3,9 +3,9 @@
        <div class="span12"> 
 
 
-			<p>It looks like you're trying to access member-only content. Why not signup and join the cool kids? That way you don't have to start smoking cigarettes behind the gym to look cool.</p>
+			<p>It looks like you're trying to access member-only content. Why not signup?</p>
 
-			<p>If you're already one of the cool kids login.</p>
+			<p>If you're already a member please <a href="/users/login">login</a>.</p>
 		</div>		
 	</div>
 </div>
