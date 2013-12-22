@@ -102,10 +102,10 @@ $('#first_name').change(function() {
 	var name_length=name.length;
 
 	if (name_length > 20) {
-		$('.firstlength').html('Names can be no longer than 25 characters, sorry!');
+		$('#firstlength').html('Names can be no longer than 25 characters, sorry!');
 	}
 	else {
-		$('.firstlength').html(' ');
+		$('#firstlength').html(' ');
 	};
 
 
@@ -154,7 +154,7 @@ $('#billingAddress').change(function() {
 
 	var billingAddress_length=billingAddress.length;
 
-	if (billingAddress_length > 25) {
+	if (billingAddress_length > 29) {
 		$('#billingaddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
 	}
 	else {
@@ -170,7 +170,7 @@ $('#billingAddress2').change(function() {
 
 	var billingAddress_length=billingAddress.length;
 
-	if (billingAddress_length > 25) {
+	if (billingAddress_length > 29) {
 		$('#billingaddresslength2').html("This field doesn't take more than 30 characters, sorry!");
 	}
 	else {
@@ -184,7 +184,7 @@ $('#city').change(function() {
 
 	var city_length=city.length;
 
-	if (city_length > 30) {
+	if (city_length > 29) {
 		$('#citylength').html("City names cannot be longer than 30 characters.");
 	}
 	else {
@@ -202,7 +202,7 @@ $('#state').change(function() {
 
 	var state_length=state.length;
 
-	if (state_length > 25) {
+	if (state_length > 29) {
 		$('#statelength').html("The state should only be two letters long.");
 	}
 	else {
@@ -218,7 +218,7 @@ $('#zipcode').change(function() {
 
 	var zipcode_length=zipcode.length;
 
-	if (zipcode_length > 5) {
+	if (zipcode_length > 4) {
 		$('#zipcodelength').html("The zip should only be 5 numbers long.");
 	}
 	else {
@@ -236,7 +236,7 @@ $('#email').change(function() {
 
   	var email_length=email.length;
 
-	if (email_length > 45) {
+	if (email_length > 44) {
 		$('#emaillength').html("The email field doesn't take more than 50 characters, sorry!");
 	}
 	else {

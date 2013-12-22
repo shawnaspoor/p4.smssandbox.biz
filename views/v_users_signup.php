@@ -21,7 +21,7 @@
 				
 									<h4>Email Address</h4>
 									<div class="requiredinput">*</div><br>
-									<input type="text" id ="email" name="email" maxlength="30" class="required">
+									<input type="text" id ="email" name="email" maxlength="45" class="required">
 									<div class="length" id="emaillength"></div>
 									
 
