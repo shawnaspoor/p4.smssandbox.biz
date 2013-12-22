@@ -25,7 +25,7 @@
 									<div class="length" id="emaillength"></div>
 									
 
-									<h4>Phone Number</h4><br>
+									<h4>Phone Number (no () or -'s please, just numbers)</h4><br>
 									<input type="text" id ="phoneNo" name="phoneNo" maxlength="30" class="required">
 									<div class="length" id ="phoneNolength"></div>	
 			
@@ -51,7 +51,7 @@
 									<div class="length" id="statelength"></div>
 									
 									<h4>Zipcode</h4><div class="requiredinput">*</div><br>
-									<input type="text" id ="zipcode" name="zipcode" maxlength="5" class="required">
+									<input type="text" id ="zipcode" name="zipcode" maxlength="6" class="required">
 									<div class="length" id="zipcodelength"></div>
 
 

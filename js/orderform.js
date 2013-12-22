@@ -78,14 +78,14 @@ $(document).ready(function(){
 	   messages: {
 	     first_name: "<br> Please enter your first name",
 	     last_name:  "<br> Please enter your last name",
-	     phoneNo:  "<br> Phone numbers can be numbers only",
+	     phoneNo:  "<br> Phone numbers can be digits only",
 	     password:  "<br> Please enter a password that is at least 5 character long",
 	     billingAddress: "<br> Please enter a billing address.",
 	     city: "<br> Please enter your city",
 	     state: "<br> We need your state.",
 	     zip: "<br> Zipcodes can be numbers only",
-	     licenseNo: "<br> Legally we need to keep this on file. We appreciate your cooperation.",
-	     email: "<br> Definitely required, we need to know how to contact you to take payment."
+	     licenseNo: "<br> Legally we need to keep this on file. Thanks!.",
+	     email: "<br> That doesn't appear to be a valid email address."
 	   }
 	 });
 });
@@ -218,7 +218,7 @@ $('#zipcode').change(function() {
 
 	var zipcode_length=zipcode.length;
 
-	if (zipcode_length > 4) {
+	if (zipcode_length > 5) {
 		$('#zipcodelength').html("The zip should only be 5 numbers long.");
 	}
 	else {
