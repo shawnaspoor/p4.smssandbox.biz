@@ -22,9 +22,7 @@
                                         <td class="unit_price"><?=$line[0]['pricePerUnit']?></td>  
                                         <td class="unit_price"><?=$line[0]['quantity']?></td> 
                                         <td class="remove">
-                                            <form  action="/cart/cart" method="get" >
-                                                <input type="hidden" name="id" value="<?=$line[0]['productID']?>" value="remove">
-                                                <button type ="submit" name="action" value="remove">remove</button>
+                                                <a href="/cart/cart&id=<?=$line[0]['productID']?>&action=remove"><button>remove</button></a>
                                             </form>
                                          </td>  
                                     </tr>  
