@@ -11,12 +11,12 @@
 									<h4>First Name</h4>
 									<div class="requiredinput">*</div><br>
 									<input type="text" id ="first_name" name="first_name" class="required" maxlength="25">
-									<div class="length" class="firstlength"></div>
+									<div class="length" id="firstlength"></div>
 							
 									<h4>Last Name</h4>
 									<div class="requiredinput">*</div><br>
 									<input type="text" id ="last_name" name="last_name" class="required" maxlength="25">
-									<div class="length" class="lastlength"></div>
+									<div class="length" id="lastlength"></div>
 					
 				
 									<h4>Email Address</h4>
@@ -36,11 +36,11 @@
 
 									<h4>Street Address</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="billingAddress" name="billingAddress" maxlength="30" class="required">
-									<div class="length" class="billingaddresslength"></div>	
+									<div class="length" id="billingaddresslength"></div>	
 
 									<h4>Street Address 2</h4><br>
 									<input type="text" id="billingAddress2" name="billingAddress2" maxlength="30">
-									<div class="length"></div>	
+									<div class="length" id="billingAddress2"></div>	
 
 									<h4>City</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="city" name="city" maxlength="30" class="required">

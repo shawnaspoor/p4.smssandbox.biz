@@ -119,10 +119,10 @@ $('#last_name').change(function() {
 	var name_length=name.length;
 
 	if (name_length > 20) {
-		$('.lastlength').html('Names can be no longer than 25 characters, sorry!');
+		$('#lastlength').html('Names can be no longer than 25 characters, sorry!');
 	}
 	else {
-		$('.lastlength').html(' ');
+		$('#lastlength').html(' ');
 	};
 
 
@@ -155,10 +155,26 @@ $('#billingAddress').change(function() {
 	var billingAddress_length=billingAddress.length;
 
 	if (billingAddress_length > 25) {
-		$('.billingaddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
+		$('#billingaddresslength').html("The billing address field doesn't take more than 30 characters, sorry!");
 	}
 	else {
-		$('.billingaddresslength').html(' ');
+		$('#billingaddresslength').html(' ');
+	};
+});
+
+$('#billingAddress2').change(function() {
+	//find out what they entered as their address
+	var billingAddress = $(this).val();
+
+	$('#billingAddressOut2').html(billingAddress);
+
+	var billingAddress_length=billingAddress.length;
+
+	if (billingAddress_length > 25) {
+		$('#billingaddresslength2').html("This field doesn't take more than 30 characters, sorry!");
+	}
+	else {
+		$('#billingaddresslength2').html(' ');
 	};
 });
 
