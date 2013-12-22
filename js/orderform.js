@@ -98,7 +98,6 @@ $('#first_name').change(function() {
 	//find out what they entered as their name
 	var name = $(this).val();
 
-	console.log(name);
 	var name_length=name.length;
 
 	if (name_length > 20) {
@@ -115,7 +114,6 @@ $('#last_name').change(function() {
 	//find out what they entered as their name
 	var name = $(this).val();
 
-	console.log(name);
 	var name_length=name.length;
 
 	if (name_length > 20) {
@@ -134,8 +132,6 @@ $('#phoneNo').change(function() {
 	//find out what they entered as their address
 	var phoneNo = $(this).val();
 
-	$('#phoneNo').html(phoneNo);
-
 	var phoneNo_length=phoneNo.length;
 
 	if (phoneNo_length > 13) {
@@ -150,8 +146,6 @@ $('#billingAddress').change(function() {
 	//find out what they entered as their address
 	var billingAddress = $(this).val();
 
-	$('#billingAddressOut').html(billingAddress);
-
 	var billingAddress_length=billingAddress.length;
 
 	if (billingAddress_length > 29) {
@@ -164,17 +158,15 @@ $('#billingAddress').change(function() {
 
 $('#billingAddress2').change(function() {
 	//find out what they entered as their address
-	var billingAddress = $(this).val();
-
-	$('#billingAddressOut2').html(billingAddress);
+	var billingAddress2 = $(this).val();
 
 	var billingAddress_length=billingAddress.length;
 
 	if (billingAddress_length > 29) {
-		$('#billingaddresslength2').html("This field doesn't take more than 30 characters, sorry!");
+		$('#billingAddresslength2').html("This field doesn't take more than 30 characters, sorry!");
 	}
 	else {
-		$('#billingaddresslength2').html(' ');
+		$('#billingAddresslength2').html(' ');
 	};
 });
 
@@ -300,7 +292,6 @@ $("form").change(checkForm);
  */
 
 (function($) {
-	console.log("validate is being loaded");
 
 $.extend($.fn, {
 	// http://docs.jquery.com/Plugins/Validation/validate
