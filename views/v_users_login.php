@@ -11,7 +11,7 @@
 
 						<?php if (isset($error)): ?>
 							<div class='error'>
-								Have you been drinking? If you're "sober" and you just forgot how to computer double check your email and password 'cause your login attempt failed.
+								Login attempt failed. Please check your username and password.
 							</div>
 							<br>
 						<?php endif; ?>

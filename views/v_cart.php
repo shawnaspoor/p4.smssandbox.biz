@@ -42,8 +42,7 @@
               
                      </form>
               
-                         <p>You will need to be signed in to submit this order. We can only allow verified users to order online.</p>
-
+                            <?=$unidentifieduser;?>
          </div>
      </div>
  </div>
