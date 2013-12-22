@@ -31,7 +31,7 @@
 			
 									<h4>Password</h4>
 									<div class="requiredinput">*</div><br>
-									<input type="text" id ="inputPassword" name="password" class="required" >
+									<input type="password" id ="inputPassword" name="password" class="required" >
 									<div class="length" id="passwordlength"></div>
 
 									<h4>Street Address</h4><div class="requiredinput">*</div><br>
@@ -46,7 +46,7 @@
 									<input type="text" id ="city" name="city" maxlength="30" class="required">
 									<div class="length" id="citylength"></div>
 
-									<h4>State</h4><div class="requiredinput">*</div><br>
+									<h4>State (postal abbreviation)</h4><div class="requiredinput">*</div><br>
 									<input type="text" id ="state" name="state" maxlength="30" class="required">
 									<div class="length" id="statelength"></div>
 									
