@@ -83,6 +83,8 @@
 									<button id="button" type="submit" class="btn btn-primary">Sign Up</button>
 								</div>
 							</div>
+				<br />
+				<br />
 				</form>
 			</div>
 		</div>
